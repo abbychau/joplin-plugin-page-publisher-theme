@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('./_blocks/head') %>
+    <title>Tags - <%= $site.siteName %></title>
+</head>
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        <%= $site.siteName %>
+      </a>
+    </nav>
+    <div class="blogs-list-block">
+      <ul>
+        <% for (const tag of _.uniq(_.flatten(_.map($site.articles, 'tags')))) { %>
+          <li>
+            <strong style="font-size:2em"><%= tag %></strong>
+              <ul>
+                <% for (const article of $site.articles) { %>
+                  <% if (article.tags.includes(tag)) { %>
+                    <li>
+                      <a class="annual-block-title" href="/<%= article.fullUrl %>">
+                        <%= article.title %>
+                      </a>
+                    </li>
+                  <% } %>
+                <% } %>
+              </ul>
+            </li>
+          <% } %>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

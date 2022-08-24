@@ -4,7 +4,6 @@
     <%- include('./_blocks/head') %>
     <title><%= $site.siteName %></title>
   </head>
-
   <body>
     <div class="homepage-main">
       <div class="homepage-title-area">
@@ -15,9 +14,12 @@
         <ul>
           <% for (const menuItem of $page.menu) {%>
           <li><a href="<%= menuItem.link %>"><%= menuItem.label %></a></li>
-          <% } %> <% if($link.rss) { %>
+          <% } %>
+          <% if($link.rss) { %>
           <li><a href="<%= $link.rss %>">RSS</a></li>
           <% } %>
+          
+          <li><a href="<%= $link.tags %>">Tags</a></li>
         </ul>
       </nav>
     </div>

@@ -1,5 +1,5 @@
 {
-  "author": "ylc395",
+  "author": "abbychau",
   "pages": {
     "index": [
       {
@@ -39,6 +39,11 @@
         "label": "Date Format",
         "defaultValue": "YYYY-MM-DD HH:mm",
         "tip": "See <a href=\"https://momentjs.com/docs/#/displaying/\">moment.js document.</a>"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Tags"
       }
     ],
     "about": [
