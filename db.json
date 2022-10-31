@@ -9,6 +9,9 @@
       },
       "abby": {
         "siteName": "Abby's Notes"
+      },
+      "default_theme_backup": {
+        "siteName": "Abby's Note"
       }
     }
   },
@@ -17,6 +20,16 @@
     "email": "abbychau@gmail.com"
   },
   "articles": [
+    {
+      "published": true,
+      "noteId": "397872b317ab40718e0f9bff0e148156",
+      "createdAt": 1667224524923,
+      "updatedAt": 1667227000160,
+      "tags": [],
+      "content": "Abby 的Joplin Blog 設定方法\n\n主題和Blog 內容只限Abby 使用，和讓我自己日後參考，以下路徑請按個人需求修改。\n\n1. https://github.com/settings/tokens , 建立一個public_repo(這個就夠) 的token\n2. 打開 C:\\Users\\abbyc\\.config\\joplin-desktop\\plugin-data\n3. git clone https://github.com/abbychau/joplin-plugin-page-publisher-theme ylc395.pagesPublisher\n4. ctrl+shift+p -> 選 publisher\n5. 按Generate -> http://localhost:3000 檢查有沒有錯誤\n\n完\n\n註: 不知何故 `_assets/main.css` 沒法引入，暫時完全inline。",
+      "url": "joplin-blog",
+      "title": "Joplin Blog 設定方法"
+    },
     {
       "published": true,
       "noteId": "98a5b9338dd84aa8b53cacf612263750",
