@@ -46,6 +46,12 @@
         "name": "Tags"
       }
     ],
+
+    "feeds": [
+      {
+        "name": "RSS"
+      }
+    ],
     "about": [
       {
         "name": "content",
