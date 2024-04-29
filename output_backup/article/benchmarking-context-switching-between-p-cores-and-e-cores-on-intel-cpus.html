@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      Benchmarking Context Switching Between P-Cores and E-Cores on Intel CPUs - Abby&#39;s Notes
+    </title>
+<link rel="stylesheet" href="/_markdown_plugin_assets/highlight.js/atom-one-light.css" /></head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          Benchmarking Context Switching Between P-Cores and E-Cores on Intel CPUs
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1714389693882">
+                2024-04-29 20:21
+              </time></span>
+            <span>Updated At: <time datetime="1714390502848">
+                2024-04-29 20:35
+              </time></span>
+          </div>
+          
+        </div>
+      </header>
+      <div class="article-content markdown-body"><h1 id="introduction">Introduction</h1>
+<p>The latest version of the game Cyberpunk 2077 has successfully implemented a strategy where all its threads are bound to the Performance Cores (P-Cores) of Intel CPUs. This optimization has sparked curiosity among developers and enthusiasts about the potential benefits of leveraging the heterogeneous architecture of modern Intel processors, which feature a combination of P-Cores and Efficient Cores (E-Cores).</p>
+<p>My hypothesis is that the separation of the L2 cache between E-Cores and P-Cores can introduce significant latency when switching between them. This latency can be particularly slow in certain CPU models, leading to performance degradation. By creating separate thread pools for E-Cores and P-Cores and strategically assigning threads to specific core types, substantial performance improvements can be achieved.</p>
+<p>To investigate this hypothesis and explore the impact of context switching between P-Cores and E-Cores, a benchmark program has been developed. This article will present the benchmark code, discuss the precautions taken during its development, and analyze the results obtained from running the benchmark on an Intel CPU with both P-Cores and E-Cores.</p>
+<h1 id="benchmark-code">Benchmark Code</h1>
+<p>The benchmark program is written in C++ and utilizes the Windows API to retrieve processor information and set thread affinity. Here's the code:</p>
+<div><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;thread&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;windows.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;chrono&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;random&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-type">int</span> NUM_ITERATIONS = <span class="hljs-number">1000000</span>;
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">benchmarkTask</span><span class="hljs-params">(std::vector&lt;DWORD_PTR&gt; pCoreMasks, std::vector&lt;DWORD_PTR&gt; eCoreMasks, <span class="hljs-type">bool</span> pCoreOnly, <span class="hljs-type">bool</span> eCoreOnly)</span> </span>{
+    std::random_device rd;
+    <span class="hljs-function">std::mt19937 <span class="hljs-title">gen</span><span class="hljs-params">(rd())</span></span>;
+    std::uniform_int_distribution&lt;&gt; <span class="hljs-built_in">pCoreDistribution</span>(<span class="hljs-number">0</span>, pCoreMasks.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>);
+    std::uniform_int_distribution&lt;&gt; <span class="hljs-built_in">eCoreDistribution</span>(<span class="hljs-number">0</span>, eCoreMasks.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>);
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; NUM_ITERATIONS; ++i) {
+        <span class="hljs-keyword">if</span> (pCoreOnly &amp;&amp; !pCoreMasks.<span class="hljs-built_in">empty</span>()) {
+            <span class="hljs-comment">// Set the thread affinity to a random P-Core</span>
+            DWORD_PTR mask = pCoreMasks[<span class="hljs-built_in">pCoreDistribution</span>(gen)];
+            <span class="hljs-built_in">SetThreadAffinityMask</span>(<span class="hljs-built_in">GetCurrentThread</span>(), mask);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (eCoreOnly &amp;&amp; !eCoreMasks.<span class="hljs-built_in">empty</span>()) {
+            <span class="hljs-comment">// Set the thread affinity to a random E-Core</span>
+            DWORD_PTR mask = eCoreMasks[<span class="hljs-built_in">eCoreDistribution</span>(gen)];
+            <span class="hljs-built_in">SetThreadAffinityMask</span>(<span class="hljs-built_in">GetCurrentThread</span>(), mask);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// Randomly select a P-Core or E-Core</span>
+            <span class="hljs-type">bool</span> usePCore = (i % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>);
+
+            <span class="hljs-keyword">if</span> (usePCore &amp;&amp; !pCoreMasks.<span class="hljs-built_in">empty</span>()) {
+                <span class="hljs-comment">// Set the thread affinity to a random P-Core</span>
+                DWORD_PTR mask = pCoreMasks[<span class="hljs-built_in">pCoreDistribution</span>(gen)];
+                <span class="hljs-built_in">SetThreadAffinityMask</span>(<span class="hljs-built_in">GetCurrentThread</span>(), mask);
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!usePCore &amp;&amp; !eCoreMasks.<span class="hljs-built_in">empty</span>()) {
+                <span class="hljs-comment">// Set the thread affinity to a random E-Core</span>
+                DWORD_PTR mask = eCoreMasks[<span class="hljs-built_in">eCoreDistribution</span>(gen)];
+                <span class="hljs-built_in">SetThreadAffinityMask</span>(<span class="hljs-built_in">GetCurrentThread</span>(), mask);
+            }
+        }
+
+        <span class="hljs-comment">// Perform some work</span>
+        <span class="hljs-type">double</span> result = <span class="hljs-number">0.0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">1000</span>; ++j) {
+            result += std::<span class="hljs-built_in">sin</span>(j) * std::<span class="hljs-built_in">cos</span>(j);
+        }
+    }
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">int</span> argc, <span class="hljs-type">char</span>* argv[])</span> </span>{
+    <span class="hljs-type">bool</span> pCoreOnly = <span class="hljs-literal">false</span>;
+    <span class="hljs-type">bool</span> eCoreOnly = <span class="hljs-literal">false</span>;
+
+    <span class="hljs-comment">// Parse command-line arguments</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; argc; ++i) {
+        std::string arg = argv[i];
+        <span class="hljs-keyword">if</span> (arg == <span class="hljs-string">"--p-core-only"</span>) {
+            pCoreOnly = <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arg == <span class="hljs-string">"--e-core-only"</span>) {
+            eCoreOnly = <span class="hljs-literal">true</span>;
+        }
+    }
+
+    DWORD returnedLength = <span class="hljs-number">0</span>;
+    BOOL ret = <span class="hljs-built_in">GetLogicalProcessorInformationEx</span>(RelationProcessorCore, <span class="hljs-literal">nullptr</span>, &amp;returnedLength);
+    <span class="hljs-keyword">if</span> (ret == FALSE &amp;&amp; <span class="hljs-built_in">GetLastError</span>() == ERROR_INSUFFICIENT_BUFFER) {
+        <span class="hljs-function">std::vector&lt;<span class="hljs-type">char</span>&gt; <span class="hljs-title">buffer</span><span class="hljs-params">(returnedLength)</span></span>;
+        SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX* processorInfo = <span class="hljs-built_in">reinterpret_cast</span>&lt;SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX*&gt;(buffer.<span class="hljs-built_in">data</span>());
+
+        ret = <span class="hljs-built_in">GetLogicalProcessorInformationEx</span>(RelationProcessorCore, processorInfo, &amp;returnedLength);
+        <span class="hljs-keyword">if</span> (ret) {
+            std::vector&lt;DWORD_PTR&gt; pCoreMasks;
+            std::vector&lt;DWORD_PTR&gt; eCoreMasks;
+
+            <span class="hljs-type">char</span>* ptr = buffer.<span class="hljs-built_in">data</span>();
+            <span class="hljs-keyword">while</span> (ptr &lt; buffer.<span class="hljs-built_in">data</span>() + returnedLength) {
+                SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX* info = <span class="hljs-built_in">reinterpret_cast</span>&lt;SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX*&gt;(ptr);
+                <span class="hljs-keyword">if</span> (info-&gt;Relationship == RelationProcessorCore) {
+                    <span class="hljs-keyword">if</span> (info-&gt;Processor.EfficiencyClass == <span class="hljs-number">0</span> || info-&gt;Processor.EfficiencyClass == <span class="hljs-number">2</span>) {
+                        pCoreMasks.<span class="hljs-built_in">push_back</span>(info-&gt;Processor.GroupMask[<span class="hljs-number">0</span>].Mask);
+                    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (info-&gt;Processor.EfficiencyClass == <span class="hljs-number">1</span>) {
+                        eCoreMasks.<span class="hljs-built_in">push_back</span>(info-&gt;Processor.GroupMask[<span class="hljs-number">0</span>].Mask);
+                    }
+                }
+                ptr += info-&gt;Size;
+            }
+
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Number of P-Cores: %zu\n"</span>, pCoreMasks.<span class="hljs-built_in">size</span>());
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Number of E-Cores: %zu\n"</span>, eCoreMasks.<span class="hljs-built_in">size</span>());
+
+            <span class="hljs-comment">// Create multiple benchmark threads</span>
+            <span class="hljs-keyword">const</span> <span class="hljs-type">int</span> numThreads = <span class="hljs-number">4</span>;
+            std::vector&lt;std::thread&gt; threads;
+            <span class="hljs-keyword">auto</span> start = std::chrono::high_resolution_clock::<span class="hljs-built_in">now</span>();
+
+            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; numThreads; ++i) {
+                threads.<span class="hljs-built_in">emplace_back</span>(benchmarkTask, pCoreMasks, eCoreMasks, pCoreOnly, eCoreOnly);
+            }
+
+            <span class="hljs-comment">// Wait for all threads to finish</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span>&amp; thread : threads) {
+                thread.<span class="hljs-built_in">join</span>();
+            }
+
+            <span class="hljs-keyword">auto</span> end = std::chrono::high_resolution_clock::<span class="hljs-built_in">now</span>();
+            <span class="hljs-keyword">auto</span> duration = std::chrono::<span class="hljs-built_in">duration_cast</span>&lt;std::chrono::milliseconds&gt;(end - start).<span class="hljs-built_in">count</span>();
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Benchmark completed in %lld milliseconds.\n"</span>, duration);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>
+<h1 id="precautions">Precautions</h1>
+<p>When developing the benchmark program, several precautions were taken to ensure accurate and reliable results:</p>
+<p>Core Arrangement: Initially, the program assumed that P-Cores and E-Cores were arranged in a specific order, which was logically(but not practically) incorrect. It is crucial to retrieve the affinity masks from the processor information using the GetLogicalProcessorInformationEx function and set thread affinity correctly, regardless of the CPU model or core arrangement. This ensures that the benchmark accurately targets different core types and CPU models.</p>
+<p>Context Switching Location: There was a discussion about whether the context switching should happen within the benchmarkTask function or when creating the benchmark threads. It is essential to ensure that the context switching occurs inside the benchmarkTask to accurately measure the impact of switching between P-Cores and E-Cores. Performing context switching outside the task could lead to misleading results.</p>
+<p>Workload Characteristics: The benchmark program should be designed to simulate real-world workloads that are relevant to the software being optimized. The choice of CPU-intensive work performed in each iteration of the benchmarkTask should be representative of the actual workload. It is crucial to consider the specific characteristics of the software and adapt the benchmark accordingly.</p>
+<p>Sample Size and Statistical Significance: To obtain reliable results, the benchmark should be run multiple times, and the sample size should be sufficiently large to ensure statistical significance. It is important to consider the variability of the results and perform appropriate statistical analysis to draw meaningful conclusions.</p>
+<p>By taking these precautions into account, the benchmark program can provide more accurate and reliable insights into the performance impact of context switching between P-Cores and E-Cores on Intel CPUs.</p>
+<h1 id="results">Results</h1>
+<p>Running the benchmark program on an Intel CPU with both P-Cores and E-Cores yielded the following results:</p>
+<p>P-Core Only: The benchmark ran the fastest when all threads were bound to P-Cores only.<br />
+E-Core Only: The benchmark ran slower when all threads were bound to E-Cores only.<br />
+Mixed Mode: The benchmark exhibited the slowest performance when forcing context switching between P-Cores and E-Cores.</p>
+<p>These results align with the hypothesis that the separation of the L2 cache between E-Cores and P-Cores can introduce significant latency when switching between them. By binding threads to specific core types, as demonstrated in Cyberpunk 2077, performance can be optimized.</p>
+<p>Here is my result on my i7 13700KF CPU (128GB DDR4 3200 Ram, Win 11)</p>
+<div><pre class="hljs"><code>.<span class="hljs-string">\bench.exe</span> 
+<span class="hljs-built_in">Number</span> <span class="hljs-keyword">of</span> P-Cores: <span class="hljs-number">8</span>
+<span class="hljs-built_in">Number</span> <span class="hljs-keyword">of</span> E-Cores: <span class="hljs-number">8</span>
+Benchmark completed <span class="hljs-keyword">in</span> <span class="hljs-number">11180</span> milliseconds.
+.<span class="hljs-string">\bench.exe</span> --p-core-only
+<span class="hljs-built_in">Number</span> <span class="hljs-keyword">of</span> P-Cores: <span class="hljs-number">8</span>
+<span class="hljs-built_in">Number</span> <span class="hljs-keyword">of</span> E-Cores: <span class="hljs-number">8</span>
+Benchmark completed <span class="hljs-keyword">in</span> <span class="hljs-number">7261</span> milliseconds.
+.<span class="hljs-string">\bench.exe</span> --e-core-only
+<span class="hljs-built_in">Number</span> <span class="hljs-keyword">of</span> P-Cores: <span class="hljs-number">8</span>
+<span class="hljs-built_in">Number</span> <span class="hljs-keyword">of</span> E-Cores: <span class="hljs-number">8</span>
+Benchmark completed <span class="hljs-keyword">in</span> <span class="hljs-number">7447</span> milliseconds.</code></pre></div>
+<h1 id="conclusion">Conclusion</h1>
+<p>The benchmark program provided valuable insights into the performance impact of context switching between P-Cores and E-Cores on Intel CPUs. It highlighted the importance of considering the architectural differences between core types when designing and optimizing software.</p>
+<p>The results supported the hypothesis that the separation of the L2 cache can introduce latency when switching between E-Cores and P-Cores, and that binding threads to specific core types can lead to performance improvements.</p>
+<p>I think this may have a even large impact on seperated big.little CPUs like Quadcomm SnapDragon 810. Further exploration and testing on different CPU models and workloads would be beneficial to gain a more comprehensive understanding of the performance characteristics of P-Cores and E-Cores due to their physical latencies.</p>
+<p>Nonetheless, this experiment serves as a starting point for developers to investigate and optimize their software for heterogeneous CPU architectures. By strategically assigning threads to specific core types and minimizing context switching between E-Cores and P-Cores, developers can potentially improve performance and leverage the full potential of modern desktop/mobile CPUs (even Intel is planned to drop E-Core soon).</p>
+<h1 id="appendix">Appendix</h1>
+<p>gist: <a title="https://gist.github.com/abbychau/8ac93aa252be9d37b7a69d93e09ab004" href="https://gist.github.com/abbychau/8ac93aa252be9d37b7a69d93e09ab004">https://gist.github.com/abbychau/8ac93aa252be9d37b7a69d93e09ab004</a></p>
+<p>main.cpp performance(by multiplying iterations for 100):<br />
+<img src="/_resources/64ca3cc703a347cfafb7f8cd1be5ba97.png" /></p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

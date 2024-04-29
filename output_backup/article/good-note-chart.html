@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      音樂遊戲中甚麼是好譜面 - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          音樂遊戲中甚麼是好譜面
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1660735408574">
+                2022-08-17 20:23
+              </time></span>
+            <span>Updated At: <time datetime="1660738192282">
+                2022-08-17 21:09
+              </time></span>
+          </div>
+          
+            <div>
+              Keywords: 
+                <span class="keyword">
+                  遊戲
+                </span>
+                
+                <span class="keyword">
+                  音樂遊戲
+                </span>
+                
+            </div>
+            
+        </div>
+      </header>
+      <div class="article-content markdown-body"><p>這是個大問題，大到要從譜面的起源中談起。</p>
+<p>首先大家要認同彈鋼琴和打爵士鼓廣義來說也是音樂遊戲的一種。</p>
+<p>比如說iOS 的Simply Piano：</p>
+<p><img src="/_resources/a4a9e1906fc149088b78129dfa2c46d7.png" /></p>
+<p>和機廳的Doogi Doogi的真實模式：</p>
+<p><img src="/_resources/646a506a010f462c837ef313709077c4.png" /><br />
+<a title="https://www.youtube.com/watch?v=trJbt4w5UB4" href="https://www.youtube.com/watch?v=trJbt4w5UB4">https://www.youtube.com/watch?v=trJbt4w5UB4</a></p>
+<p>他們拿了五線譜作爲遊戲譜面，所以他們可以做到完全把一層的樂器軌拿走。</p>
+<p>但上手的難度很高，也有人玩simply piano 玩高級後直接去考級了（連樂理都順面補上）。</p>
+<p>完全擬真的好處是，演奏爽度很高，但操作爽度很低，很多人玩音遊或多或少都希望打得又快又多，擬真起上來就太花時間了。</p>
+<p>所以就出現了Keyboard Mania和Beatmania。</p>
+<p>KM有很多的譜面還是可以對應同音階的，而早期的BM 也是儘量把重一個音色匹配到同一個鍵上面，以儘量模擬FX 控制器爲基礎。</p>
+<p>但我們可以看到很多自動化的東西出現了，比如說自動換音色。</p>
+<p>在這時，我認爲的好譜有綠の風和Pink Rose 這兩首在KM 誔生的名曲。前者是由Easy, Normal, Normal+ 到Real 都是在操作器範內來很完整表示，而且對原曲有很階段性完成度的譜，這四份譜即使單獨拿出來到鋼琴上使用也是有欣賞價值。而Pink Rose 則是令大家瞭解到這是一臺Keyboard 而不是鋼琴。我想說KM 上面的幾乎都是好譜。</p>
+<p><img src="/_resources/0ecb5cbfdbe44070a001c21a22ea6805.png" /></p>
+<p><a title="https://www.youtube.com/watch?v=-JNryW_3vQ0" href="https://www.youtube.com/watch?v=-JNryW_3vQ0">https://www.youtube.com/watch?v=-JNryW_3vQ0</a></p>
+<p>KM 的話Drunk Monkey 和 20, November 等等很多電子舞曲都是很用心起挑選了代表性高的FX 作爲譜面，以至把FX 單獨使用起來已經成爲這首音樂的一大部分了。但一直髮展下去，開始多人玩時，有人就希望移植，比如說The Least 100 sec. ，因爲鋼琴部分很多，所以強行匹配時就變成前樓梯（階段）和後樓梯，或者亂鍵，打起上來有一定爽度，但在這個標準來說就是差譜了。</p>
+<p>自此以來，譜面好壞就有了這兩個標準。</p>
+<p>到VOS和KM7K 出現時，因爲是一人合奏，所以在操作時可以分段嘗試，比如說第一段琴，電腦幫我伴鼓和結他，第二段我就做鼓了，第三段再換成結他。或者，其中兩個鍵是鼓的兩個點，其他是主旋律等等，這是在按鍵變多後的好處。但到這個時期，人們已經慢慢接受了頻率後高的自動匹配更新。</p>
+<p>在這個時期，堅持長期間匹配就是好譜了。這個情意結到很後期都還在的。</p>
+<p>比如說：到o2jam 的Blade。</p>
+<p>令人容易疲勞，長達一分半鐘的交替連押<br />
+<a title="https://www.youtube.com/watch?v=Ra31pN4cJW8&amp;ab_channel=TEPES" href="https://www.youtube.com/watch?v=Ra31pN4cJW8&amp;ab_channel=TEPES">https://www.youtube.com/watch?v=Ra31pN4cJW8&amp;ab_channel=TEPES</a></p>
+<p><img src="/_resources/0033e64b688b4af9b6a9835811a744fa.png" /></p>
+<p>我認爲這是在mp3 時期回頭向Canmusic 致敬的表現。</p>
+<p>但這個時候音樂遊戲已經是大衆娛樂了，很多人都抱怨：這種譜又難讀又不爽，其實還是擬真和順手的矛盾。但大部分人在這個時期已經覺得：順手譜纔是好譜。</p>
+<p>甚至，連無調性的DDR 也是有這問題：譜一定要造成理論上可順腳嗎？</p>
+<p>Drum Mania 和 Guitar Freak 常常都連在一起說，但譜面上要分開來說。</p>
+<p>DM 和BM 的道路十分相似，DM 一直是標榜自己的高模擬度，在框體上是寫着鼓模擬器的。</p>
+<p>但到後來玩家水平提高後，爲了滿足在短時間來擊打後多的滿足感，出現了很多在現實中十分沒有意義，音量很低(尤其在BassDrum)的記號來充場面。</p>
+<p>所以我引有一個概念：就是Note 音量和音色和音調的可解釋性。這在簡單譜上很容易做到，但在難譜上，就要看製譜者用不用心了，DM甚至會出現同一個位連續三個不同音色的這回事。</p>
+<p>好譜可以看一下Toccata 和 Dragon Blade。</p>
+<p><a title="https://www.youtube.com/watch?v=kXKHdwHUv-s" href="https://www.youtube.com/watch?v=kXKHdwHUv-s">https://www.youtube.com/watch?v=kXKHdwHUv-s</a></p>
+<p><img src="/_resources/459599d618e8492ba0eaf9b49d64d6e8.png" /></p>
+<p>而GF 不是完全模擬演奏的，無論上面的幾個鍵是用來模擬自動和絃器或是真實的按弦，在譜面上都沒法解釋，但演出音效而全是結他或者Bass 的部分。</p>
+<p>其實，無論音樂和譜面都是音遊很重要的部分，好的譜面無一不是爲了該遊戲而製作的音樂而產生的。</p>
+<p>可惜，在這個時期我們從音樂和譜面交相迭代而產生一隻遊戲，進入了一個先音樂後譜面的年代。</p>
+<p>這時候評價譜面多了很多元素，有很多都是hype feature。</p>
+<p>進入這個時代不得不提太鼓之達人的升溫，太鼓的演奏很像拍手，是很純粹的節奏遊戲。但音樂是由節奏和音階組成的。DM 對音色還算有一定的複雜度，但太鼓就完全簡化成兩個階度了。和節奏天國（リズム天國）也差不遠了。所以評價太鼓的譜面時我們反而又更在乎但和音樂本身的合襯度了，而其實這和譜本身沒有關係，這是在評價另一首音樂而已。而音樂性來說，我覺得夏祭り本身十分和太鼓十分合襯，但無論如何，都有大量的主觀成分在裏面。</p>
+<p>但進入完全抽象化的音遊之前。。。</p>
+<p>其實還有一種擬真的音遊，像是Dance Central和Dance Evolution (Arcade)，而評價編舞我就不詳寫了，因爲和其他的沒有很大的可比性。如果要對比投票，DEA 取得大部分的票也說不定。。。</p>
+<p>（當然原因也可能是有很多女玩家<br />
+<img src="/_resources/095a49b363db49ccb484fac835a674e3.png" /></p>
+<p>Jubeat 本來是想模擬像Launchpad 這種midi 控制器的，但因爲抽象程度太高了，所以很快就變成一隻很單純的十六鍵節奏遊戲了。各種各樣的圖案押和文字押也影響了後來像MaiMai 這樣的有觸屏元素的音遊。Reflectbeat 從出生就已經是節奏遊戲了，那就一同帶過了。</p>
+<p>圖案押和文字押會不會是優秀的標準之一，我交給各人的主觀判斷好了。但是，這也可能成爲垃圾的標準，因爲他們和音樂是沒有關係的。SDVX引入大量的flanger 和Remix 音樂反而令人有回到BM5K 那種譜面和音樂互相扶持的感覺，比如說兩個FX按鈕和兩個旋鈕都很能表達出他們對音樂本身的作用，但到近年，譜面都無可避免地由爲音樂服務變爲向玩家服務了。</p>
+<p>一個很典型的SDVX 譜，中間的Z字型和彎型其實沒有影響<br />
+<a title="https://www.youtube.com/watch?v=VVw9o6kSDtc&amp;ab_channel=GGD" href="https://www.youtube.com/watch?v=VVw9o6kSDtc&amp;ab_channel=GGD">https://www.youtube.com/watch?v=VVw9o6kSDtc&amp;ab_channel=GGD</a><br />
+<img src="/_resources/391cf06567bf465e9ecb7206e7081769.png" /></p>
+<p>IIDX 和SDVX 也收入了很多視覺元素，比起說中間演出時間。時出最好看的可能要數另一隻節拍遊戲：Groove Coaster。</p>
+<p>那麼，演出好不好看，也成爲了譜面優不優秀的評價標準了嗎？</p>
+<p><img src="/_resources/fae48b143e044cd3814ece26632bc923.png" /></p>
+<p><a title="https://www.youtube.com/watch?v=Gemrr2Nr0I4&amp;list=PLEHZ6dXqCTK1DWlgPihrmq6DF-luheH0-" href="https://www.youtube.com/watch?v=Gemrr2Nr0I4&amp;list=PLEHZ6dXqCTK1DWlgPihrmq6DF-luheH0-">https://www.youtube.com/watch?v=Gemrr2Nr0I4&amp;list=PLEHZ6dXqCTK1DWlgPihrmq6DF-luheH0-</a></p>
+<p>不計Groove Coaster 那種把譜面直接變成動畫的節拍遊戲。SDVX的傾側，出軌和旋轉等等對操作並無任何額外資訊的表現方式。這反而對日後的手遊音遊產生了很多影響，現在的手遊也出現了很多譜面上的特效，而因爲觸屏的特性，也直接可對操作產生影響。同期還有Djmax Technica，這隻遊戲基本上確立了現代手音遊的路向。</p>
+<p>LL, SIF等等定軌的不說了。</p>
+<p>很多時，手遊中拼的除了原創曲之外，就是演出了。</p>
+<p>Groove Coaster 之外Dynamix , Deemo, Cytus, Zyon, voez, Crossbeat 等等之中，我覺得把不定軌和演出效果做得最好的我覺得是Lanota的系統了。</p>
+<p>效果就不截圖了，要看片的：<a title="https://www.youtube.com/watch?v=9Q5qvmu9bww" href="https://www.youtube.com/watch?v=9Q5qvmu9bww">https://www.youtube.com/watch?v=9Q5qvmu9bww</a></p>
+<p>除了加減速，它的軌道也包含了前進，後退，放大，旋轉，移動等等元素，在VOEZ 後，大家都直接在視譜器上動手腳了，我就想想下一步會時甚麼了。。。</p>
+<p>手遊部分待更新。。。</p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

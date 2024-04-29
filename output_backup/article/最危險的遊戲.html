@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      最危險的遊戲 - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          最危險的遊戲
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1582570556000">
+                2020-02-25 03:55
+              </time></span>
+            <span>Updated At: <time datetime="1660066142015">
+                2022-08-10 02:29
+              </time></span>
+          </div>
+          
+            <div>
+              Keywords: 
+                <span class="keyword">
+                  小說
+                </span>
+                
+            </div>
+            
+        </div>
+      </header>
+      <div class="article-content markdown-body"><p>——理察·康奈爾</p>
+<p>「右邊那裡就是舊海圖上的所謂沉舟島，」惠特尼說，「海員對那個地方有著莫名其妙的恐懼。迷信……」</p>
+<p>「看不見,」雷恩斯福德說。他試圖透過籠罩著遊艇的潮濕而悶熱的夜幕張望。</p>
+<p>「再過幾天到了巴西,天空就會晴朗多了，」惠特尼保證說，「我們應當在亞馬孫河上游痛痛快快地打打獵。打獵是一種好運動。」</p>
+<p>「是世界上最好的運動，」雷恩斯福德表示同意。</p>
+<p>後來，他的夥伴下去睡覺了，雷恩斯福德留在甲板上再抽一袋煙。正吸菸時，一種意料不到的聲音使他吃了一驚，接連又是兩聲，黑夜中有人開了三槍。</p>
+<p>他朝槍響的方向極目眺望，但象是隔著一張毯子要透視過去似的。雷恩斯福德跳上船欄，以便站得更高些，菸斗撞著繩索，從嘴邊掉了下去。他急忙傾身抓菸斗，身體一下子失去了平衡，跌落到像熱血般溫暖的加勒比海中。他掙扎著游出水面，大聲呼喊。隨著遊艇的燈光越離越遠，他拚命地划水追趕，但是燈光很快就消失在夜色中。</p>
+<p>剛才的槍聲來自右方。雷恩斯福德盡力朝那個方向游去，不知遊了多久。然後從昏暗中傳來了獸類受驚嚇時的叫聲——接著就被一聲響亮而短促的手槍聲打斷了。</p>
+<p>差不多已經游到了礁石上，他才看見是礁石。他使出剩下的一點力掙脫開旋流，喘著氣，一頭撲在礁石上，就呼呼大睡起來。</p>
+<p>一覺醒來時已近黃昏。海灘邊的叢林中顯然無路可通，倒不如沿著岸邊走去還比較方便些。暮靄漸漸籠罩住大海和叢林，雷恩斯福德這才看見崖壁高處一幢寬大的房子所閃射出的燈光。於是他走上了台階。</p>
+<p>一個穿著制服，身材魁梧、大黑鬍子垂到腰部的人，手握左輪開了門。</p>
+<p>「不用大驚小怪，」雷恩斯福德說，「我是從船上落海的。我的名字叫桑格·雷恩斯福德，家住紐約市。」</p>
+<p>又一個身穿晚禮服的白頭髮高個子走出來，並且伸出了手。「我是沙洛夫將軍。承蒙大名鼎鼎的狩獵家雷恩斯福德先生光臨，真不勝榮幸。我拜讀過你在西藏尋獵雪豹的那本大作。」他做了個手勢，那穿制服的人收起了手槍。</p>
+<p>「伊凡壯得出奇，」將軍說，「有點象野蠻人。他是哥薩克人，我也是。」</p>
+<p>「還是請進來吧，我們不應該在門口聊天。你需要換換衣服，吃點東西，休息一下。請吧，雷恩斯福德先生，讓伊凡給你帶路。」</p>
+<p>後來他們在豪華的大廳里坐下來吃晚飯時，將軍說道：「我知道你的大名，你也許感到奇怪。有關打獵的書我全都讀過。我生平只有一種嗜好--打獵。」</p>
+<p>「你這裡有一些很漂亮的獸頭，」雷恩斯福德望了望牆壁說，「那隻好望角野牛真大。我一直認為在所有的大野獸中好望角野牛是最危險的。」</p>
+<p>「那倒不是，」將軍回答說，「在這裡的獵場上，我獵取的是更危險的獵物。當然不是土生土長的，得由我向這島上提供。」</p>
+<p>「將軍，你弄進來些什麼東西呢？老虎嗎？」</p>
+<p>將軍咧嘴笑了一笑：「不是，老虎已經是不夠刺激的了，並不真正危險。雷恩斯福德先生，我所尋求的是危險。」</p>
+<p>「究竟是什麼獵物……？」</p>
+<p>「我告訴你，我終於認識到，我必須創造出一種新的動物來獵取。我又問自己：理想的獵物應該具備哪些特點？答案是：必須有勇氣，有智謀--而最重要的是--必須具有思維能力。好在有一種動物能夠思維。」</p>
+<p>「你的意思該不會是說殺人吧？」</p>
+<p>「這詞兒多難聽，」將軍說道，「我獵取的不過是世上的渣滓--不定期貨船上的船員。來窗口看看吧，」他一按電鈕，遠方海上便出現閃光。「燈光指示出一航道，那裡都是些象剃刀那樣銳利的礁石，船隻碰上去就象堅果殼被碰碎似的。」</p>
+<p>「你要明白，這是一種遊戲。我向來客提出打獵的建議。讓他先走三小時。我隨後出發，只帶一隻22口徑手槍。如果受獵的人能三整天不讓我找到他，他就贏了。如果被我找到」將軍微微一笑「那他就輸了。」</p>
+<p>「要是他不肯受獵呢？」</p>
+<p>「那麼我就把他交給伊凡，這個人頭腦簡單，曾經一度擔任過沙皇手下正式的鞭笞手，對於遊戲，有他自己一套想法。來客總是寧可打獵的。</p>
+<p>「如果客人贏了呢？」</p>
+<p>將軍笑得更得意了。「迄今我還沒輸過，不過曾經有一個人幾乎贏了。我最後不得不出動獵犬。你來看，」他領先走向另一窗口，雷恩斯福德看見十來只巨大的黑色的東西在下面晃動。</p>
+<p>「現在我帶你去參觀一下最近收集的獵物。到書房去，好嗎？不想來！啊，對了。你需要好好睡一覺。明天你就會覺得象換了一個人似的。」</p>
+<p>「第二天一直到午飯時分沙洛夫將軍才露面。雷恩斯福德發現他那雙漆黑的眼睛在打量自己。「今晚，」將軍說，「我們去打獵--就你和我兩個人。」</p>
+<p>「不，將軍，」雷恩斯福德說，「我不打獵。」</p>
+<p>將軍聳了聳肩：「隨你的便吧。不過我提醒你，我的所謂遊戲，比伊凡的卻有趣得多。你會認為這值得一試--我們可以鬥智，比森林知識，較量體力。」</p>
+<p>「如果我贏了……」雷恩斯福德開口說。</p>
+<p>「如果到了第三天的午夜，我還沒有找到你，我就承認失敗。我的小帆船會把你送上大陸。我決不食言。」</p>
+<p>「現在，」沙洛夫一本正經地說，「伊凡會把獵裝，食物和一把刀給你。我勸你避開島上東南角上的大沼澤，我們把那個地方稱為死沼，那裡有流沙。我要等到黃昏才出發。夜晚打獵比較有意思，你說是嗎？」</p>
+<p>……</p>
+<p>雷恩斯福德被一種近乎驚慌的心情所驅使，在叢林中奔走了兩小時，此刻才停下來估量形勢。</p>
+<p>「這樣我會讓他有蹤跡可循了。」他暗自思忖著，一面踏上了無路的荒野。想起獵狐的經驗和狐狸逃遁的方式，他踏出了一連串複雜的圈子，弄得足跡往返交錯。天黑了，雷恩斯福德到達林木茂密的山脊，腿走累了。「當了狐狸，」他想，「現在再當野貓。」近旁有一棵枝椏粗密的大樹，他小心翼翼地爬了上去，避免遺留痕跡，然後躺在一根粗壯的大樹枝上。</p>
+<p>長夜漫漫。將近黎明時分，聽到叢林中有什麼東西緩慢而又謹慎地走過來。他將身軀貼緊大樹枝，透過濃密的層層樹葉向下望去。</p>
+<p>是沙洛夫將軍。他一步一步地走過來，兩眼密切注視著地面。快到樹下時他停了下來，跪在地上察看一陣。接著又站起來，點燃了一支黑色的長香菸。</p>
+<p>他的目光沿著樹幹一寸又一寸地向上移，雷恩斯福德屏住呼吸。但那獵人敏銳的目光快移到獵物棲身的樹枝時卻停住了。沙洛夫深思熟慮地微笑著，一邊張嘴向空中噴了個煙圈。隨即漫不經心地走開了。</p>
+<p>雷恩斯福德把胸中憋了好久的氣吐了出來。他首先想到：那將軍顯然在夜晚也能在叢林中進行艱難的追蹤，只因為一時不巧，才沒看到他所追獵的對象。</p>
+<p>他再仔細一想：將軍笑什麼？為什麼轉身回去？那是將軍在捉弄他，要留他再戲耍一天。</p>
+<p>雷恩斯福德此刻體會到恐懼的滋味了。</p>
+<p>他從樹上滑下來，進入森林。走了三百碼後便停住了腳，在那裡有株大枯樹。很不牢固地斜靠著一株較小的活樹。他拔刀出鞘，開始動手。幹完後，他急忙躲到一百英尺外一根倒放著的原木後面。他等了沒多久。</p>
+<p>那哥薩克人只顧一味追蹤，沒有發現機關，一腳踩了上去。他的腳碰上凸出的樹枝--觸發裝置。將軍發覺情況不對，縱身後躍，但是已經晚了；枯樹倒下，擦身擊中了他。他站在那裡，揉著受傷的肩膀，那含有譏諷的笑聲響徹叢林。</p>
+<p>「雷恩斯福德，」他叫道，「讓我祝賀你。沒有多少人會架設馬來捕人機。你真有意思，雷恩斯福德先生，現在我回去裹傷；只是一點輕傷。別著急，我會回來的。」</p>
+<p>將軍走了之後，雷恩斯福德繼續奔逃。天色漸暗，接著黑夜降臨。他覺得他的鹿皮鞋踩在地上越來越軟。再跨前一步，腳陷進了爛泥。原來是死沼！</p>
+<p>鬆軟的土地使他有了個主意。他從流沙處退後十幾英尺，開始在地面掘坑。挖到齊肩的深度時，他爬上來找了些堅硬的小樹製作樹樁，將一頭削尖。這些樹樁都插進坑底，尖端向上。接著他又用野草和樹枝搭編成粗席，蓋住坑口，然後，他汗流浹背地蹲在一棵樹後。</p>
+<p>聽到鬆軟土地的腳步聲。他知道追逐者來了。接著是樹枝的折裂聲--以及樹樁戳中什麼時的哀叫。他探頭一瞧，在坑邊三英尺處，有一個人拿著手電筒站著。</p>
+<p>「雷恩斯福德！」將軍叫道，「你的緬甸獵虎坑弄死了我一隻最好的狗。你又得手了。現在我要把獵狗都帶來，看你怎樣應付。多謝，這一夜玩得很有趣。」</p>
+<p>拂曉時分，留在沼澤附近的雷恩斯福德驚醒過來，聽到遠處模糊而又不連續的聲音：獵犬的狂吠。他站著思索了一陣，想起在烏干達學會的土著把戲。</p>
+<p>他離開沼澤地，很快找到一株有彈性的小樹。他將獵刀綁在小樹上，鋒刃衝著足跡。再用一截野葡萄藤將小樹反扎……然後拚命跑開。獵犬嗅出了新鮮氣味，叫得更起勁了，雷恩斯福德那時體會到了當困獸的感覺。</p>
+<p>獵狗的吠叫聲突然停止。雷恩斯福德跳動的心也跟著停住了。他們一定來到了插刀的地方。</p>
+<p>他激動地爬上樹，回頭張望。追逐者已站定了。但希望落了空，眼見沙洛夫將軍一槍在手，依然無恙。彈起的小樹揮動獵刀，卻擊中了用皮帶牽著獵犬的伊凡。</p>
+<p>雷恩斯福德跳回地面，獵犬又狂吠起來。</p>
+<p>「要鎮靜，別慌！」他一面撒腿狂奔，一面喘著氣自言自語。前面樹木間呈現出一條藍色的裂縫。他到達了海邊，隔著小海灣他可以看到對面築成那幢大房子的灰色巨石。波濤在二十英尺下激盪翻騰。雷恩斯福德猶豫了一會兒，然後便縱身躍入海中。</p>
+<p>將軍帶著他的獵犬趕到海邊空曠處站住，對著碧綠色的那片海水觀望了一陣。</p>
+<p>當天晚上吃飯時，有兩件懊惱的事情使沙洛夫將軍吃得不香。第一，不容易找到人接替伊凡；第二，獵物沒到手。當然，這是由於那個已自殺的美國人沒有遵守比賽規則。於是他去書房讀書，藉以排遣愁悶。到了十點鐘，他感到有點舒適而又疲倦，這才起身轉回臥室。</p>
+<p>他沒有開燈，先走到窗邊看看下面的院子。那些大獵犬在月光下都看得很清楚，他不覺大聲說道：「希望下次運氣好點。」接著便扭亮了燈。</p>
+<p>一直躲在有罩蓋的床帳里的人，站在他的面前。</p>
+<p>「雷恩斯福德！」將軍尖叫起來，「天曉得你是怎麼會來到這裡的？」</p>
+<p>「游過來的。我發現這樣比穿過叢林要快些。」</p>
+<p>對方倒吸一口冷氣，露出笑容：「我向你道賀，這場遊戲你贏了。」</p>
+<p>雷恩斯福德卻沒有笑。「我還是一頭陷入絕境的困獸，」他的嗓音低啞深沉，「準備吧，沙洛夫。」</p>
+<p>這位將軍深深鞠了一躬。「我明白，」他說道，「好極了。我們之中總有一個要拿去餵狗。另一個就睡在這張美好的床上。小心吧，雷恩斯福德……」</p>
+<p>雷恩斯福德認為他有生以來從沒有睡過比這更舒適的床。</p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

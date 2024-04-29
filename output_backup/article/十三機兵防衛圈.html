@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      十三機兵防衛圈 - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          十三機兵防衛圈
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1660534215274">
+                2022-08-15 12:30
+              </time></span>
+            <span>Updated At: <time datetime="1673499402964">
+                2023-01-12 13:56
+              </time></span>
+          </div>
+          
+            <div>
+              Keywords: 
+                <span class="keyword">
+                  遊戲
+                </span>
+                
+            </div>
+            
+        </div>
+      </header>
+      <div class="article-content markdown-body"><h1 id="8月的感想">8月的感想</h1>
+<p><img src="/_resources/ca1f8ad8a2c4473fb72951a175a99552.png" /></p>
+<p>我知道香草社在開發這隻遊戲時，幾乎把自社坑到快要消失了，本來在PSV 上延遲推出卻只能推遲到PSV 的消失，首發放了在PS4。（而如果世界線有偏移，這將會成為PSV 上最好的遊戲）</p>
+<p>在玩這遊戲之前，我以為是一隻冷門的戰甲戰略遊戲，也不知道香草社的任何故事。而我感謝這個誤解，令我可以完全空白地去玩這隻神一般的AVG。就像我去玩AIR 前甚至連AIR 是甚麼都不知道一樣。</p>
+<p>到我玩了一半（用上過場和對話快轉的方法，花了12小時，大約三十至四十完成度，如果要全語音聽取的話可能要多花一半），心想：這麼神奇的作品怎麼賣不出去！這有天理嗎！？</p>
+<p>好奇之搜尋了一下。發現Fami通和櫻井政博(SMB)、橫尾太郎（Neir)、乃至遊戲界以外（例如馬伯庸）原來已經公開地給過極其誇張，又如我所體驗一樣的溢美之詞：</p>
+<p>櫻井：「今後的遊戲史上或許無論如何也做不出，也不會再做出這樣的遊戲了。」<br />
+FAMI通：「《十三機兵防衛圈》是一款獨一無二的作品，而且無法被模仿。」<br />
+橫尾：「Atlus倒閉我都無所謂，《十三機兵》一定要賣爆」</p>
+<p>我尤其感謝櫻井的助攻，讓冷門的AVG 真的賣斷了。</p>
+<p>香草社就該讓世界看到了！這是精細敘事的最高境界。好遊戲就算受眾多窄，香草社也應得到它應有的名譽和生命！。</p>
+<p>這，是一隻AVG。而可以用來評判AVG 的所有標準，我覺得他都已經佔滿了</p>
+<ol>
+<li>畫風獨特而且美麗</li>
+<li>劇情線極其複雜、有張力、齊頭並進、而且幾乎沒bug</li>
+<li>劇情衝突激烈，敍事和對話卻柔和得像高中</li>
+<li>音樂能互補</li>
+<li>擁有一個極爽快、又獨特、又能幫助還原事件的大規模戰鬥系統</li>
+<li>分配平衡的群像劇</li>
+<li>令人信服的感情線加上硬核的科幻干涉</li>
+<li>每個分支線結尾留下的張力十足，根本停不下來</li>
+<li>互動環境的表現充份得不像AVG</li>
+<li>令人懷念又嚮往的時代背景，還有足夠還原背景動態</li>
+</ol>
+<p>上面任何一點能達成，我都能給整個遊戲正分了。<br />
+而它，卻全部都做到，而且做得很好。</p>
+<p>因為這遊戲的體驗就是不停的轉接，我是一分一亳都沒法劇透。<br />
+我決定拿出禁術：捧一踩一，為了禁術可以順利施放，就只拿我真的很愛的遊戲好了</p>
+<p>拿一些近似的參照物：</p>
+<p>我想對《流行之神》說：「你看看別人是怎麼把多設定融合記事的，你連兩個都搞不定。」<br />
+對《命運石之門0》說：「你在十三機兵面前就像一隻Demo」<br />
+對《彈丸論破》說：「你看起來就像一隻同人作品」<br />
+對《428》說：「你這時間線就像幼兒園」<br />
+對《Ever17》說：「老前輩不踩。只是請你看看今天的遊戲敍事發展到甚麼高度了。。。你有感到欣慰嗎。。。」</p>
+<p>真有這麼誇張。</p>
+<p>我玩的冒險遊戲真的不少了。<br />
+但這個劇本在我未完成前，我也一定能把它排到前三。主要是編排和實現難度真的是太高了。</p>
+<p>這高度不像是Cyberpunk 2077 可以靠日後的技術力提高而壓低開發複雜度。<br />
+群像戲小說本身是難以異步合作、高度上下文依賴的同步的作品。把它寫成遊戲更是困難。但只要玩到，都能想像到為甚麼它可以把Vanillaware 從PSV 拖到Switch 還能起死回生。</p>
+<p>本來我在玩完八小時後寫了一些的，但怕自己太腦熱<br />
+現在大約可以給《十三機兵防衛圈》一個大約的評價了，暫定10分。</p>
+<p>即使你們結局爆死，你們走到這一步我也是佩服了。</p>
+<h1 id="四個月後完成遊戲後">四個月後（完成遊戲後）</h1>
+<p><img src="/_resources/d4882a8a1c544359825e5a61b0ddb7c0.png" /></p>
+<p>拖了很久，昨晚玩完十三機兵防衛圈了。</p>
+<p>玩完之後，簡直和這遊戲一樣，千頭萬緒卻不知能從何說起。</p>
+<p>首先，我覺得就算完全劇透也毫不影響這遊戲可玩性和懸疑感，因為它實在太多強上下相關的人物和懸念了，作為我認為是敍事的頂峰，根本多到不是一篇文章可以有嚴重影響的。</p>
+<p>一：每個人物和時間都是獨立的，這不是所謂的敍事詭計，反而，他是逼切地想你知道所有奇怪和矛盾的事。<br />
+二：崩壞篇是真的好玩，而且最終兩戰的緊張感真的有被劇情焢托出來。</p>
+<p>總時間30小時，這個是幾乎不聽語音加過轉完全快轉的玩法。戰鬥也沒有玩strong 模式。</p>
+<p>我還是保持著它10分的評價。我也很難想像要超越這劇本要多少的精力。</p>
+<p>《13》 的懸疑中出現的可能的敘事Trick 代理出奇的多，不是一數推理小說的一個，或者一些比較局中局的高峰劇本中會套兩（甚至三）層，我是能數出11個。（〔附錄一〕。未玩不可以看，而且看了也不會因此而幫助理解裡面複雜的人物關係，但如果你不想玩，那可以看一下，讓你知道這個世界中有一個媒體，一口氣利用了多少代理。）因此它亳不掩飾地展露矛盾，展露到像是不斷出現的倒敘，而事實上，這些是不是倒敘也根本沒法用通常的中文科定義來定論它是不是倒敘。</p>
+<p>因為對於每個人物的劇情，開展的時間都是獨立的，所以有「13個人物 * 5個扇區 * 3次循環」的劇情。這不是為了欺騙讀者，而是他們是按「要素展示的邏輯層級」排次序的，他已經盡力把這個故事用最易懂的方法寫好了。</p>
+<p>而且它們（〔附錄一〕）同時出現而不矛盾，有些看起來是妥協，實際上當下也只能是這樣想。</p>
+<p>小結一個敘事方面的推坑讚美表（下面還有其他方面的）：</p>
+<ul>
+<li>比428 更平衡又更長的群像劇</li>
+<li>比ever17 更深入幾層的敍事覆蓋</li>
+<li>出奇多又集大成的敍事詭計代理（narrative trick proxies)。</li>
+<li>純潔又不扭曲的愛情</li>
+<li>前無古人後無來者的群像劇</li>
+<li>是個不用心就不能寫成的故事</li>
+</ul>
+<p>由於《13》的文本量以及劇情複雜程度遠超一般 AVG（就算比起8月篇提過的所有遊戲），我根本不怕劇透和機制解構會對享受它帶來很大的傷害。</p>
+<p>就算你已經玩過一次了，也不得不再玩一次。</p>
+<p>我甚至都沒有信心可以在二刷時把劇情記清楚，即使它沒有任何的隱瞞。</p>
+<p>說到科幻X群像劇，可以提一提《LIVE A LIVE》和《Chrono Trigger》，這兩部10大RPG 之二。我的看法是：優秀的點不一樣，很難比較，但單說劇本、敘事手法、倫理關係，《13》遠遠超過大前輩們。</p>
+<p>我會無條件地建議《13》給所有能看懂中文或日文的人。</p>
+<p>可是，這個推薦不在於你會享受大部分的時間（我有，而且我的主觀動能很充足，但是我也看到路人玩家要用「堅持」去支撐），而是在於，這部作品的獨特和用心，你可能沒法在其他作品中找到了。十三機兵劇本的優秀，並不在於令人驚訝的想法和某個點子上，而是在於精雕細琢，這可能可以在Disco Elysium 這種重文本和重對話的故事中找到類似的優點，但卻沒法找到非線性劇本中，在排除這個代入感的幫助下，依舊這麼好看。</p>
+<p>人物的對話水平非常的高，在我看來，它能在簡短的對話中展現人物的性格和當前的想法，雖然文本量不少，但這和流水賬的對話型AVG 還能明顯拉開差距，會能感受到日本人的表達方法的有效性，這點和我看《雙層公寓》（Netflix + FujiTV 實景戀愛綜藝）時的感覺有共通之處。</p>
+<p>其次，周邊方面</p>
+<p>-《13》的2D 人物動作很自然，而同時又很可愛。而且互動真實，動作中間幀多到覺得豪華</p>
+<ul>
+<li>昭和感</li>
+<li>室內外光線很美，真實感和繪畫感並存，尤其在2D的動畫和背景中，真的賞心悅目</li>
+<li>奇觀感不用誇張的畫法，直接表達故事中的場景就已經很驚艷。</li>
+<li>音樂比起我四個月前感受的還要好，而且不喧賓奪主</li>
+</ul>
+<p>《13》成功佔據MHW 和2077 都沒有拿下的，這個我前表（點擊左上看目錄）數十款遊戲中，第一個也是唯一一個的10分。</p>
+<p>其他遊戲和小說可以學習的點：</p>
+<ol>
+<li>很重要：現在一些懸疑和推理小說有一個很大很大的問題：為敘詭而敘詭，敘詭亳無為敘事效用服務的合理性，隱藏關鍵信息之後強行在結尾大反轉。《13》算是把主線劇情切稀碎的典型了，但它本身作為多重narrator encapsulation 的劇本，所以為無法猜出所有的Tricks 但它不但不隐藏關鍵信息，還主動讓你去把信息記住。我覺得這是作為一本小說能能維持張力的一個頗為基本要求。</li>
+<li>結尾收束穩定，這部遊戲對大部分玩家來說，人物關係是偏難的，甚至都不一定能掌握所有懸念的解釋，這時候，收束就變得很難，可能要來個磒石遁（馬伯庸），或者來個「都是一場夢」一類的機械降神。我覺得《13》沒有給玩家一個很平易近人的總結，一方面是為了真實感，另一方面，算是一個俗套卻合理的緩降神。（尤其是，如果你到最後如果連東雲諒子說過甚麼都忘記了的時候）</li>
+</ol>
+<p>但第二點也明顯是因為某些問題而出現的：</p>
+<p>劇情理解成本偏高，我連解逆轉裁判都可能要靠窮舉的，要我記這個劇本實在太難了。卡幾次全員進度的的鄉登有給出幾個小小的他對千尋的成功推理的合理性的解釋，但對於這個混亂的結構來說可以說是杯水車薪，而且一小杯水、一火車薪。但其實問題出現的原始原因就算在故事前半已經有人主動表白了，也毫不影響這個遊戲的張力，因為對於未知的探索實在太多了。單純期待玩家依賴遊戲的究明篇來整埋事件的全部其實是痛苦而吃力的，效果也不好。但實際上，真的加一個主線裡面五個扇區每個特點的「真相總結」，那總結的能是誰呢？這遊戲中還真是每人都是主角，他們也沒法同時討論，把這個劇情寫出來不是一件簡單的事，雖然鄉登在信息上掌握上算是最好的人選了，但以他的性格一定不會自己自語這麼多的。</p>
+<p>這個缺失讓《13》失去了結局的思緒上的結局高潮。</p>
+<p>其次，這個混亂的劇本結構不但削弱了推進故事的代入感（本來劇本的對白這麼好！），但削弱了我對故事中人物成長的感覺。尤其是<br />
+「當有些主要角色還一堆分身時」和「馬上就要對抗我下一個主角時」</p>
+<p>不過這就只是瑕瑜互見。</p>
+<p>這個故事總體來說是以科幻要素佔絕對主導，雖然在今天，無論在新要素的展開還是在AVG 元素下的創新，都已經不大可能，但這個《13》的故事在「構想的大」和「展現構想的努力」下都達到了很高的水平，而且沒有一刻會讓你跌入「我在讀小說」的VN（視覺小說）感，就算拋開我覺得本來就很好玩的崩壞篇不談，《13》從來沒有忘記他作為一隻冒險遊戲的尊嚴，《13 機兵防衛圈》有記住：AVG 遊戲先是遊戲，再是冒險遊戲，再才是一隻文字冒險遊戲。這點作為沒有分支的遊戲來說，更是難能可貴，希望各個以操作劇情需求以達到各個劇情分支目的的各遊戲能學習一下，AVG 的遊戲性不在於此。</p>
+<p>最後，一些再比較不重要的系統和崩壞篇（半即時戰略遊戲）方面：</p>
+<p>存讀檔系統完美，可以在任何時候儲存、查看分句、重讀分句。也有自動儲存。</p>
+<p>戰鬥方面也沒有難為玩家，可以重開戰鬥不算失敗，也能調低難度和刷關。但機能有限制，上300米高的EX怪物也只是一個圖示，戰鬥的慘烈全靠崩壞篇的讀白和玩家的想像。</p>
+<p>究明篇（Library）有所有的關鍵劇情和關鍵字所包含的意思和隱藏意思，可能要花上數小時去一個個閱讀。</p>
+<p>但是，劇情回溯只能靠究明篇，在主篇一週目完成前是沒法使用Tree Map 來回溯的，因此看劇情時請盡量把每字每句都看到（？）。</p>
+<h1 id="總結">總結</h1>
+<p>AVG 是在走下坡路嗎？很有可能，但我覺得也不會像RTS 一樣邊緣化到這個地步。有很多東西就是重文本的，無論是CRPG 如Disco Elysium 這樣要探討因不同人的生活和理想而達到的政治形態，還是友情和愛情這種更現代信任模式。</p>
+<p>而且，越是近代的AVG 壽命就越長，AVG 不像鎗車球（FPS/RAC/SPT），他有更高的可能性變長尾效應。像是《The Portopia Serial Murder Case》一樣。AVG 比起書本有更高的記述彈性，我認為是敘述詭計更為天然的溫床。</p>
+<p>對比起《428》和《Detroit: Become Human》的交替共時，或者Ever17(及其他無限輪回系列)的單週目單時序，《13》更像是惡名昭彰的《彗星來的那一夜》一樣既頻繁切換主角，也打亂了時間線。我想《13》會像《428》和《Ever17》一樣，會成為談論AVG 時沒法繞開的存在。</p>
+<p>而且還加入了輪迴和時間穿越，還能看能玩，《13》的劇本班底我誇多少次都不厭。</p>
+<p>《13》就是天下第一神捕豹子頭 - 雷豹說的 : 「I claim them all.」(欸？)</p>
+<p><img src="/_resources/d92790f30f7b42698e161b96c487e249.png" /></p>
+<p>Vanillaware shrugged his shoulders. "You're welcome," he said.</p>
+<p><img src="/_resources/54f082b8af1d487eae85fc0299dd1ff7.png" /></p>
+<h3 id="下面是附錄">下面是附錄</h3>
+<p><img src="/_resources/48ae321318274bf7bd3701d794593d85.png" /></p>
+<p>〔附錄一〕</p>
+<h5 id="敍事詭計代理列表">敍事詭計代理列表</h5>
+<ul>
+<li>作為舞台搭建的世界的世界邊緣</li>
+<li>身邊可能存在演員對你作出引導</li>
+<li>全員都是AI 的缸中腦證據</li>
+<li>可能的藥物作用</li>
+<li>可能的共同存在人格</li>
+<li>可印證或可持續的夢境</li>
+<li>可能的體內奈米機器人</li>
+<li>可能的時空穿越</li>
+<li>可能的已實現的瞬間移動</li>
+<li>可能的人格副本</li>
+<li>虛假的世界外的世界也是虛假</li>
+</ul>
+<p><img src="/_resources/1c67dd7025e04f64b6ebb4c5fc34468b.png" /></p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

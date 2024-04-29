@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      作品評價集合 - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          作品評價集合
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1660186437573">
+                2022-08-11 11:53
+              </time></span>
+            <span>Updated At: <time datetime="1673980682546">
+                2023-01-18 03:38
+              </time></span>
+          </div>
+          
+        </div>
+      </header>
+      <div class="article-content markdown-body"><table>
+<thead>
+<tr>
+<th>last_update</th>
+<th>name</th>
+<th>score</th>
+<th>progress</th>
+<th>LINK</th>
+<th>comment</th>
+<th>平台</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11/08/2022</td>
+<td>文字遊戲</td>
+<td>9</td>
+<td>己完成真結局</td>
+<td><a title="https://www.plurk.com/p/oy7wuq" href="https://www.plurk.com/p/oy7wuq">噗浪</a></td>
+<td>本來，我就以為是一隻拼字解謎#遊戲。沒想到它的關卡設計和表現力可以優異到這個地步。每個有關文字的設計都讓我拍案叫絕。<br class="jop-noMdConv" />第五章後還不斷有新的巧思更是令我佩服得五體投地。</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Republique</td>
+<td>-2</td>
+<td>第一章</td>
+<td><a title="https://www.plurk.com/p/oy86bg" href="https://www.plurk.com/p/oy86bg">噗浪</a></td>
+<td>Cyberpunk2077 裡的Camera Hack，可以想像就是以這系統延伸出來的一個完整遊戲，但操作很不順暢，場景也令我迷惑。</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Stray</td>
+<td>0</td>
+<td>1 小時＋youtube 破關</td>
+<td><a title="https://www.plurk.com/p/oy2dsf" href="https://www.plurk.com/p/oy2dsf">噗浪</a></td>
+<td>1. 有點3D 暈。<br class="jop-noMdConv" />2. 解謎過程很沒意義。<br class="jop-noMdConv" />3. 對貓的肢體動作的新鮮感是優點</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>ゾンビ撃て<br class="jop-noMdConv" /><a title="https://apps.apple.com/jp/app/%E3%82%BE%E3%83%B3%E3%83%93%E6%92%83%E3%81%A6/id639640880" href="https://apps.apple.com/jp/app/%E3%82%BE%E3%83%B3%E3%83%93%E6%92%83%E3%81%A6/id639640880"></a></td>
+<td>4</td>
+<td>四線二十多萬分的水平</td>
+<td><a title="https://www.plurk.com/p/oxhskd" href="https://www.plurk.com/p/oxhskd">噗浪</a></td>
+<td>很純粹可以讓你觀察到你今天的部分認知力和行動力的一個手機遊戲。</td>
+<td>iOS （有廣告無付費）</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Vampire Survivors</td>
+<td>6</td>
+<td>開始金蛋，可以用正途或歪途擊敗死神</td>
+<td><a title="https://www.plurk.com/p/oxo83a" href="https://www.plurk.com/p/oxo83a">噗浪</a><br class="jop-noMdConv" /><a title="https://www.plurk.com/p/oq9r71" href="https://www.plurk.com/p/oq9r71">噗浪</a></td>
+<td>一局三十分鐘的簡單top-down roguelike，有暢快感，但作為遊戲又缺少了點甚麼</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Noita</td>
+<td>7</td>
+<td>初通關，探索Lab 狂死中</td>
+<td><a title="https://www.plurk.com/p/ox5yac" href="https://www.plurk.com/p/ox5yac">噗浪</a><br class="jop-noMdConv" /><a title="https://www.plurk.com/p/ox8mbp" href="https://www.plurk.com/p/ox8mbp">噗浪</a></td>
+<td>雖然它難度真的很高，高到不應是沙箱遊戲的標準。<br class="jop-noMdConv" />RogueLITE 這個稱呼大約就是90% Rogue , Rogue 就是單純就是告訴你「死掉就重來」，無論你花了五小時、十小時、二十小時。<br class="jop-noMdConv" />Lite 的成份很小。<br class="jop-noMdConv" />但以它的品質，能支撐起這個設定。<br class="jop-noMdConv" />它不會像泰拉一樣只深挖系統深度，也不像後沙箱時代一樣只有外表而沒有系統邏輯。<br class="jop-noMdConv" />Noita 有好好平衡，從一開始就想把一個神話放進這個類型裡。</td>
+<td></td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Diablo Immotal</td>
+<td>-5</td>
+<td></td>
+<td><a title="https://www.plurk.com/p/ox27h5" href="https://www.plurk.com/p/ox27h5">噗浪</a></td>
+<td>這是甚麼垃圾... 把暗黑做成免洗手遊... 網易我可以向你說髒話嗎</td>
+<td>iOS</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Needy Girl Overdose / 主播女孩重度依賴</td>
+<td>1</td>
+<td>大約完成6 個結局</td>
+<td><a title="https://www.plurk.com/p/owrcs3" href="https://www.plurk.com/p/owrcs3">噗浪</a></td>
+<td>我不知道這麼「渴望被關注」算不算病，也不知道這是不是像螢火蟲之墓一樣要讀者去反思主角，但至少我因此挺討厭女主角的。<br class="jop-noMdConv" />如果不是為了看不同的結局，大概我就只會不停帶她出去玩和去精神病院治治吧。</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Gladiator Guild Manager</td>
+<td>3</td>
+<td>hard-core 模式三年左右（可能記錯</td>
+<td><a title="https://www.plurk.com/p/owrabt" href="https://www.plurk.com/p/owrabt">噗浪</a></td>
+<td>戰鬥很簡明, 也不拖拉, 培養也挺有深度的，推給想玩Rogue 卻又已被Roguelite 搞厭了的人。</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Monster Hunter World: Iceborne</td>
+<td>9</td>
+<td>全通，高級裝備全齊</td>
+<td><a title="https://www.plurk.com/p/owqnh7" href="https://www.plurk.com/p/owqnh7">噗浪</a></td>
+<td>是畫面最好，故事最有代入感，兼具真實感和關卡設計的，最好的一作魔物獵人。</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>籠中窺夢 / Moncage</td>
+<td>7</td>
+<td>完成遊戲</td>
+<td><a title="https://www.plurk.com/p/owqgfo" href="https://www.plurk.com/p/owqgfo">噗浪</a></td>
+<td>獨特又令人難忘的關卡設計<br class="jop-noMdConv" />一點點的Optillusion<br class="jop-noMdConv" />溫暖又正面的故事線</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Fantasy of Expedition / 奇幻東征</td>
+<td>0</td>
+<td>初通關</td>
+<td><a title="https://www.plurk.com/p/owq5bt" href="https://www.plurk.com/p/owq5bt">噗浪</a></td>
+<td>殺戮尖塔+RTS<br class="jop-noMdConv" />玩過Roguelite 的不推，記憶點實在太少，同質化嚴重</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>龍崖</td>
+<td>3</td>
+<td>全線已完，深淵N層，角色BOX 已全</td>
+<td><a title="https://www.plurk.com/p/owq3bg" href="https://www.plurk.com/p/owq3bg">噗浪</a></td>
+<td>DnD / 暗黑系 的人物和裝備組合集合後無比的完整, 完整到可以組出極多的體系.<br class="jop-noMdConv" />而體系間卻又可以有某種平衡<br class="jop-noMdConv" />缺點就是: 除了學習傷害公式和體系, 這遊戲就沒有任何可以玩的地方了, 連個攻擊按鍵都沒有, 體驗有點像塔防了, 只是主角們的目的不是守塔而是攻塔而已</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Alina of the Arena</td>
+<td>8</td>
+<td>Hard mode 破關</td>
+<td><a title="https://www.plurk.com/p/or59aj" href="https://www.plurk.com/p/or59aj">噗浪</a></td>
+<td>神Roguelite : 「Slay The Spire」+「Into the Breach」<br class="jop-noMdConv" />AOTA 完全沒有其實獨立Roguelike 的簡陋感和抽象感<br class="jop-noMdConv" />反而有在關卡設計上很好起還原角鬥士在鬥技場中的鬥智鬥勇<br class="jop-noMdConv" />我愛死了<br class="jop-noMdConv" />尤其是在牆邊會被擊暈這個設計, 真的有在點陣風格中以純數值表達出實感<br class="jop-noMdConv" />場邊觀眾的呼喊和字幕也很真實, 而且很爽, 會有想為觀眾而表演暴力美學的欲望</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>DAEMON X MACHINA</td>
+<td>4</td>
+<td>到一關潛入的關卡</td>
+<td><a title="https://www.plurk.com/p/oq76x1" href="https://www.plurk.com/p/oq76x1">噗浪</a></td>
+<td>人物和機甲都很帥氣而且很有特色<br class="jop-noMdConv" />能用的武器很多, 操作很硬核, 或者說, 很進取, 14個按鈕和雙搖扞都要熟練的全立體戰鬥. 主要原因他像GBR 或者GVG 一樣除了雙武器和特武外, 還可以外掛兩件備用武器, 還同時在戰鬥環境中有和環境物件互動的可能.<br class="jop-noMdConv" />算是第一隻我沒法用食指單吃ZRZL和LR的遊戲吧</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Opus Magnum</td>
+<td>0</td>
+<td>第一章</td>
+<td><a title="https://www.plurk.com/p/oq49bn" href="https://www.plurk.com/p/oq49bn">噗浪</a></td>
+<td>喔我不行 , 它在無聊地消費我餘量不多的基礎工作行動點<br class="jop-noMdConv" />尤其是特化答案 ... 我知道我能找到特化答案, 但只要幻想到尋找那個答案的試驗方法就馬上想關掉了 , 看來我還是比較適合玩一點點有未知和隨機的遊戲</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>While True: learn()</td>
+<td>？</td>
+<td>？</td>
+<td><a title="https://www.plurk.com/p/opuyy3" href="https://www.plurk.com/p/opuyy3">噗浪</a></td>
+<td>是一隻不寫邏輯的編程遊戲, 但卻是MHRD 的反面, MHRD 是寫HDL,<br class="jop-noMdConv" />這個有一點邏輯, 但教的不是HDL , 卻是機器學習,<br class="jop-noMdConv" />而且很直觀的以正確率和效率來作為分類器的參數, 很有感覺! 是一隻很真實而且很能讓玩家領率到軟體工程學的一些本質的遊戲</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Chronicon</td>
+<td>5</td>
+<td>低難度通關</td>
+<td><a title="https://www.plurk.com/p/opnlia" href="https://www.plurk.com/p/opnlia">噗浪</a></td>
+<td>Chronicon 是一隻大量致敬Diablo II 的遊戲,<br class="jop-noMdConv" />例如:<br class="jop-noMdConv" />有五章的劇情,<br class="jop-noMdConv" />幫助村落、幫助戰爭、對抗天災、對抗地獄<br class="jop-noMdConv" />如果不洗點的話, 這遊戲會幾乎沒法精通而且有大量垃圾時間<br class="jop-noMdConv" />但它都改進了<br class="jop-noMdConv" />還有合成配方等等, 都一堆影子<br class="jop-noMdConv" />十分值得推薦的H&amp;S 的典型</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>ABZU</td>
+<td>5</td>
+<td>一氣全通</td>
+<td><a title="https://www.plurk.com/p/opc9zm" href="https://www.plurk.com/p/opc9zm">噗浪</a></td>
+<td>潛水的感受很新鮮, 而且操作簡便, 即使我用的是鍵盤也是覺得很充份<br class="jop-noMdConv" />整個遊戲的關卡有一點點重覆性, 但場景總體來說美感十足, 可以很容易用奇觀感麻醉一下自己<br class="jop-noMdConv" />雖然視覺是遠距離的背越式, 但因為場景挺緊的, 解迷時還是出現一點3D 暈眩</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>鬼谷八荒</td>
+<td>5</td>
+<td>堅持完美突破，到大約5/6層，未通關</td>
+<td><a title="https://www.plurk.com/p/on9k5b" href="https://www.plurk.com/p/on9k5b">噗浪</a></td>
+<td>修仙類遊戲令我印象最深刻的遊戲，而且不只是文字上的強化，更是用誇張的ARPG 表現出來。<br class="jop-noMdConv" />關於修仙者傳承和壽命的限制，突破的完美度等等多方面都有系統和描寫<br class="jop-noMdConv" />宗門也是一個不錯的子系統。<br class="jop-noMdConv" />喜歡修仙的值得一玩再玩。</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Loop Hero</td>
+<td>2</td>
+<td></td>
+<td><a title="https://www.plurk.com/p/omcq8s" href="https://www.plurk.com/p/omcq8s">噗浪</a></td>
+<td>前期已經有農感，中期目標也是農，但組合出一個農得更持久的系統這個想法挺新鮮，也很悠閒</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>仙劍群俠傳7</td>
+<td>？</td>
+<td>？</td>
+<td><a title="https://www.plurk.com/p/omcq8s" href="https://www.plurk.com/p/omcq8s">噗浪</a></td>
+<td>很普通很有既視感的UE4 遊戲模板，支線主線的標誌令我有點出戲，有老作為現實妥協的感覺，劇情未知</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>零 ～濡鴉ノ巫女～</td>
+<td>2</td>
+<td>大約第五章</td>
+<td><a title="https://www.plurk.com/p/omcq8s" href="https://www.plurk.com/p/omcq8s">噗浪</a></td>
+<td>劇情上和畫面上想表現女性的無助和脆弱<br class="jop-noMdConv" />拍照打鬼有一定遊戲性，但逛地圖不爽快，沒有甚麼重刷的欲望</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>The Silver Case</td>
+<td>3</td>
+<td>第二章</td>
+<td><a title="https://www.plurk.com/p/oj3rsf" href="https://www.plurk.com/p/oj3rsf">噗浪</a></td>
+<td>很獨特的音樂, 很獨特的表現手法, 連世界觀也很獨特, 是一個微微CyberPunk 化的現代現實 , 其中犯罪執念傳染這個設定... 我覺得CyberPunk2077 內的賽博精神病有向它致敬。<br class="jop-noMdConv" />"神威是誰" 和 與"神威"的設定不停出現事實和現實矛盾很能帶動大主線, 很引人入勝</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>11/08/2022</td>
+<td>Cyberpunk 2077</td>
+<td>9.5</td>
+<td>主線支線全通</td>
+<td><a title="https://www.plurk.com/p/odl9lq" href="https://www.plurk.com/p/odl9lq">噗浪</a></td>
+<td>2077有令人驚嘆及不可思議的場景細節和城市細節。是我玩過代入感最高的遊戲之一。<br class="jop-noMdConv" />是絕對會通關並少有地嘗試更多的支線劇情的開放式世界遊戲。地圖的細節、真實感、美術和可探索度幾乎無出其右，只細想其工作量就會馬上被折服，甚至覺得不可思議。主線也十分細心地以各種經典的cyberpunk 延展課題（例如：永續而擴大的貧富差距、身體容器應不應交易、以大財團作為主要政體等等）作為各個主線任務中的對話骨幹，構造方式是不經意地拿來支持現在的困境的合理性，既沒有說教味也沒有明顯的「留給你思考」的表示。</td>
+<td>PC</td>
+</tr>
+<tr>
+<td>04/11/2022</td>
+<td>動物森友會</td>
+<td></td>
+<td>不適用</td>
+<td></td>
+<td></td>
+<td>Switch</td>
+</tr>
+<tr>
+<td>04/11/2022</td>
+<td>薩爾達: 曠野之息</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Switch</td>
+</tr>
+<tr>
+<td>04/11/2022</td>
+<td>任天堂明星大亂鬥特別版</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Switch</td>
+</tr>
+<tr>
+<td>04/11/2022</td>
+<td>東方スペルバブル</td>
+<td>8.5</td>
+<td>正常難度通關靈夢線</td>
+<td><a title="https://www.plurk.com/p/oywcqs" href="https://www.plurk.com/p/oywcqs">噗浪</a><br class="jop-noMdConv" /><a title="https://abbychau.github.io/article/touhou-spell-bubble" href="https://abbychau.github.io/article/touhou-spell-bubble">Notes</a></td>
+<td>這是新鮮的遊戲<strong>類型</strong>，有著完整的方塊遊戲和大部分音樂遊戲的體驗，心智消費也是倍增。</td>
+<td>Switch</td>
+</tr>
+<tr>
+<td>04/11/2022</td>
+<td>召喚與合成2</td>
+<td>5</td>
+<td>關卡世界31</td>
+<td></td>
+<td>很良心的抽卡手遊，不氪不肝，雖然遊戲內容不多，但有UGC 關卡，把課金手遊做成馬里奧創造真的太棒了！</td>
+<td>iOS / Android</td>
+</tr>
+<tr>
+<td>04/11/2022</td>
+<td>爐石戰記 - 英雄戰場</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>04/11/2022</td>
+<td>十三機兵防衛圈</td>
+<td>10</td>
+<td></td>
+<td><a title="https://www.plurk.com/p/oyilm9" href="https://www.plurk.com/p/oyilm9">噗浪</a><br class="jop-noMdConv" /><a title="https://abbychau.github.io/article/%E5%8D%81%E4%B8%89%E6%A9%9F%E5%85%B5%E9%98%B2%E8%A1%9B%E5%9C%88" href="https://abbychau.github.io/article/%E5%8D%81%E4%B8%89%E6%A9%9F%E5%85%B5%E9%98%B2%E8%A1%9B%E5%9C%88">Note</a></td>
+<td>櫻井：「今後的遊戲史上或許無論如何也做不出，也不會再做出這樣的遊戲了。」</td>
+<td>Switch / PS4</td>
+</tr>
+<tr>
+<td>04/11/2022</td>
+<td>ElementTD2</td>
+<td>-2</td>
+<td>大約五關</td>
+<td><a title="https://www.plurk.com/p/oqrlch" href="https://www.plurk.com/p/oqrlch">噗浪</a></td>
+<td>完全是為情懷補票的遊戲<br class="jop-noMdConv" />把可以升級的組合分拆成無數個關卡<br class="jop-noMdConv" />系統完善了很多, 完善到比起遊戲, 更像是關卡模擬器</td>
+<td>PC</td>
+</tr>
+<tr>
+<td></td>
+<td>鬼谷八荒</td>
+<td></td>
+<td>小心地完美突破每一層，大約七至八次</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>道無窮</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Brotatos</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="legends">Legends</h2>
+<ul>
+<li>Link
+<ul>
+<li>有興趣的請在下面連結留言，裡面也有更詳細的comments</li>
+</ul>
+</li>
+<li>Score
+<ul>
+<li>區間是-10 至 +10
+<ul>
+<li>正數代表: 有玩的價值</li>
+<li>負數代表: 玩完沒有給予玩家足夠獨特的遊玩體驗</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

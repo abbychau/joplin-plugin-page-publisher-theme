@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      Monster Hunter 中的龍屬性到底是甚麼? - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          Monster Hunter 中的龍屬性到底是甚麼?
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1660734290018">
+                2022-08-17 20:04
+              </time></span>
+            <span>Updated At: <time datetime="1660735327144">
+                2022-08-17 20:22
+              </time></span>
+          </div>
+          
+            <div>
+              Keywords: 
+                <span class="keyword">
+                  遊戲
+                </span>
+                
+            </div>
+            
+        </div>
+      </header>
+      <div class="article-content markdown-body"><p>在MH 的世界中，龍屬性是個特別的東西。<br />
+我是認真為了代入感而去補完世界規則，而令過程不成為操作一個機器人過關的第三人稱ARPG。<br />
+我被問過一次這到底龍屬性是甚麼，所以很久以前答過一次。在這裡貼一下我的答案。</p>
+<p>龍屬性和水火雷冰不一樣的地方是，他本身是一種剋制屬性。<br />
+舉例說：</p>
+<ol>
+<li>水屬性剋火魔物，同時水魔物是耐水屬性的。</li>
+<li>但是，龍屬性剋龍魔物，耐龍的卻是牙獸類。</li>
+<li>牙獸帶的卻是物理和異常。</li>
+</ol>
+<p>所以在裝備上龍屬性就是一個一維的變量：<br />
+用這種武器打龍魔物會更有效，但受穿龍魔物防具受到攻擊時也受更大傷害。</p>
+<p>雖然現實中沒有龍，還是可以想像得到那個世界就是就是有這種物理現象。</p>
+<p>但是！隱約發現矛盾出現了，因為用龍素材造的武器因為有龍屬性，對抗龍時有特效，<br />
+而龍屬性對抗龍防具時，又有特效。<br />
+就是說如果在MH 世界中，如果獵人打架，龍屬性武器會輕易地打入龍防具中。<br />
+但為甚麼素材會懂得自我分開自己是防具還是武器呢？</p>
+<p>在遊戲中，防具和武器是清楚划分的，<br />
+但假如兩人都手執一片大龍甲來比武，那麼相撞時會有甚麼效果呢？<br />
+如果是一片、水片火那無論如何都是水的贏。<br />
+那麼如果都是龍屬性素材呢？<br />
+按上一段的邏輯，被當成是防衛的人會身受重傷吧？<br />
+可是素材是沒有智能的，它們不能自行判斷使用者是在攻擊還是被攻擊。</p>
+<p>到這裡，我突然想起PSP武器匠人多代的對話。他們多次提過提鍊金屬的重要性，以及，金屬和有機物（骨）混合使用的重要性。</p>
+<p><img src="/_resources/8cee0701c72e4ec29c05ae1694e5aebb.png" /></p>
+<p>可見推斷：素材在加工屋經過高溫和各種合成，產生的武器能夠產和和防具不一樣甚至相反的化學和物理反應十分合理的。<br />
+那麼，合理的解釋是：<strong>加工方法不一樣</strong>。<br />
+這時才能清楚划分。</p>
+<p>細心的玩家會發現，越到後期的防具，基礎數值變好的同時，耐性也越極端化。<br />
+假設說早期是雷-5 火5，後期可以變成雷-10 火15<br />
+合成所要的合成費也相應大幅提高。<br />
+所以加工不單會影響攻防數值，還會影響屬性強弱，<br />
+我們大可更進一步地說：加工影響龍屬性的極性。</p>
+<p>而這更同時解釋，如單單只是拿著素材（例如黑龍的重殼）來當武器和防具來互相砍劈擋格，素材將無法產生應有的屬性效果。<br />
+屬性這東西只有當素材數鐵匠「開光」後才有效。</p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>
