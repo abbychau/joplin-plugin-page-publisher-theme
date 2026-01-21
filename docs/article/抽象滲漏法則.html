@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      抽象滲漏法則 - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          抽象滲漏法則
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1582570568000">
+                2020-02-25 03:56
+              </time></span>
+            <span>Updated At: <time datetime="1660215692778">
+                2022-08-11 20:01
+              </time></span>
+          </div>
+          
+            <div>
+              Keywords: 
+                <span class="keyword">
+                  CS
+                </span>
+                
+            </div>
+            
+        </div>
+      </header>
+      <div class="article-content markdown-body"><p>你每天不可或缺的Internet裡有個關鍵的小魔法，這個魔法就在TCP通訊協定這個internet的基礎協定裡。</p>
+<p>TCP是一種<em>可靠</em>的資料傳輸方法。我說可靠是指如果用TCP在網路上傳一個訊息，訊息一定會到，絕不會亂掉或壞掉。</p>
+<p>TCP的用途很多，比如抓取網頁資料或傳電子郵件都是。由於TCP這麼可靠，連那些挪用錢的東非人電郵(譯註：指有陣子常見到的騙人信)都能完整無缺的到達，真是好笑。</p>
+<p>相對的有另一種叫IP的<em>不可靠</em>資料傳輸方法。IP不保證資料會傳到，就算到了資料也可能會亂掉。如果你用IP傳送一堆訊息，很可能只有一半的訊息到達，而且其中還有一些到達的順序和原先傳送時的順序不同，另外可能有幾個訊息的內容會變掉，可能變成可愛的猩猩寶貝照片，更可能變成一堆看不懂的垃圾，看起來就像臺灣垃圾信的標題一樣。</p>
+<p>這裡就是魔法所在：TCP是架在IP上面的。換句話說，TCP不得不靠<em>一個不可靠的工具</em>想辦法可靠地傳送資料。</p>
+<p>為了說明這的確是個魔法，想想下面這個本質上相同(雖然有點滑稽)，來自真實世界的情節。</p>
+<p>想像你有個方法把演員由百老匯送到好萊塢，基本上就是讓人坐上車後開車橫越國家送過去。有些車會出車禍讓可憐的演員掛掉。有時候演員在路上喝醉了就去剃光頭或刺納粹刺青，結果變得太醜而不能在好萊塢工作。另外由於走的路線不同，演員到達的順序常會跟出發的順序不一樣。現在想像有個叫好萊塢快遞的新服務，可以把演員送到好萊塢，並且保證演員一定會(a)到達，並保證(b)順序不變而且(c)狀態完美地到達。神奇之處在於好萊塢快遞除了原本的車子以外，並沒有新的運送方法。好萊塢快遞的作法是在每個演員抵達時檢查演員的狀況，如果狀況不佳就打電話請公司把該演員的雙胞胎送來。如果演員到達的順序不對，好萊塢快遞會照正確順序重新排好。如果51區有架大幽浮在內華達的高速公路上墜毀阻斷了交通，預定走這條路線的演員就會改走亞歷桑那州，好萊塢快遞甚至不會把事情告訴加州的導演。導演只會覺得演員來得比平常慢，他們甚至不會<em>聽到</em>幽浮失事的消息。</p>
+<p>TCP的魔法大致上就是這樣。這種作法常被電腦科學家稱為<em>抽象</em>：把複雜許多的東西隱藏起來的一種簡化動作。結果很多電腦程式的設計都是在建立抽象機制。字串程式庫是什麼？它是一種偽裝，假裝電腦能像處理數字一樣輕易的處理字串。檔案系統又是什麼？也是一種偽裝，假裝硬碟並不是一堆不停旋轉，可以儲存位元的磁性碟片，而是一個有著層層目錄的階層式系統，可以存放一個個由一或多個位元組字串構成的檔案。</p>
+<p>把話題拉回TCP。稍早為了讓事情單純一點，我撒了一個小謊，而且現在有些人可能會因為這個謊氣得頭上冒煙。我說過TCP保證你的訊息會到達，其實並不會。如果你養的蛇把連接電腦的網路線咬斷了，就<em>沒有任何</em>IP封包可以通過，這時候TCP當然也不可能讓你的訊息抵達。如果你惹毛了公司的系統管理員，他們為了報復就把你接到已經超過負荷的集線器，因此只有部份的IP封包能通過，這時候TCP是會動，不過一切都會變得很慢。</p>
+<p>這就是我稱之為<em>抽象機制有漏洞</em>的狀況。TCP試圖提供一個完整的抽象機制，想隱藏底下不可靠的網路，不過有時候網路會滲漏越過抽象機制，這時就會覺得抽象其實並不太能真的提供保護。這只是我所謂「抽象滲漏法則」的一個例子而已：</p>
+<p><strong>所有重大的抽象機制在某種程式上都是有漏洞的。</strong></p>
+<p>抽象會失效。有時候輕微有時候很嚴重，反正就是有漏洞。事情會因而出錯，而且當你有抽象機制時到處都可能會發生。下面有一些例子。</p>
+<ul>
+<li>像掃描一個大的二維陣列這麼簡單的動作，是由水平方向或垂直方向掃描都會嚴重影響效率，影響的大小依「木紋」(譯註：二維陣列排列的方式)的方向而定，某個方向可能比另一個方向多產生許多的分頁失敗，而分頁失敗是很慢的。雖然寫組合語言的程式師應該可以假設自己擁有可連續定址的記憶體空間，不過虛擬記憶體表示這種假設只是種抽象機制而已。當出現分頁失敗時或是某些記憶體讀取時漏洞就會出現，處理時間會比其他記憶體慢幾毫微秒。</li>
+<li>SQL語言希望把資料庫查詢的程序抽象化，讓你只要定義想要的東西，查詢動作的細節就交由資料庫去處理。不過在某些狀況下，有些SQL查詢比邏輯上相等的查詢慢上幾千倍。這有個很有名的例子，在某個SQL伺服器用"where a=b and b=c and a=c"來查詢，會比用"where a=b and b=c"快上許多，可是查詢的結果其實是一樣的。照道理只要指定規格，並不需要在意程序。可是有時候抽象機制會失效並導致很差的效率，於是你就得跳出來用查詢規劃分析器找出問題，然後想辦法加快查詢。.</li>
+<li>NFS或SMB之類的網路程式庫，能讓你「像」處理本機檔案一樣地處理遠端機器的檔案。有時候連線速度會變得很慢或是斷線，這時遠端檔案就不再像是在本機上了，而身為程式師的你必須加程式碼來處理這種狀況。「遠端檔案和本地檔案一樣」的抽象機制<a title="http://www.joelonsoftware.com/articles/fog0000000041.html" href="http://www.joelonsoftware.com/articles/fog0000000041.html">出現漏洞</a>了。這裡有個Unix系統管理員的具體例子。如果你把使用者的home目錄放在用NFS掛入的磁碟上(一種抽象機制)，而使用者建了一個.forward檔案把他們的電郵全部轉寄到其他地方(另一種抽象機制)，如果新郵件進來時NFS伺服器停掉了，由於找不到.forward檔訊息並不會被轉寄出去。這個抽象機制的漏洞就真的會把一些訊息丟掉。</li>
+<li>C++字串類別應該能讓你假裝字串是個第一級(first-class)資料。它們嘗試把<a title="http://www.joelonsoftware.com/articles/fog0000000319.html" href="http://www.joelonsoftware.com/articles/fog0000000319.html">字串很難處理</a>這個事實抽象掉，讓它使用上像整數一樣容易。幾乎所有C++字串類別都會多載+運算子，才能把字串連接寫成<strong>s + "bar"</strong>。不過你知道嗎？不過怎麼努力，世上還是沒有C++字串類別能讓你寫成**"foo" + "bar"**，因為C++裡的字串常數一定是char*，絕對不會變成字串。這個抽象機制呈現一個程式語言本身不給補的漏洞。(有趣的是，C++隨時間演進的歷史，可以描述成嘗試用修補字串抽象機制漏洞的過程。他們為什麼不直接在語言本身加個原生的字串類別？這實在讓我搞不懂。)</li>
+<li>再來就是下雨天時開車沒辦法開得和平常一樣快，雖然車上有擋風玻璃雨刷有頭燈有車頂還有暖氣，這些裝備應該是讓你可以忽略下雨這個事實(他們把天氣抽象化了)，不過看吧，你還是得擔心天雨路滑，有時候雨甚至會大到你看不遠，所以在只好慢慢地開，因為基於抽象滲漏法則，天氣永遠不能完全被抽象化。</li>
+</ul>
+<p>抽象滲漏法則會造成問題的原因之一，是因為它說明了抽象機制並不真能照原構想簡化我們的生活。當我想訓練某人成為C++程式師時，最好能完全不教char<em>和指標運算，直接去學STL字串。問題是總有一天他們會寫出**"foo" + "bar"**這樣的程式然後看到怪事出現，於是我就得停下來教他們有關char</em>的事情。他們也可能會試著呼叫某個需要OUT LPTSTR參數的Windows API函數，於是又得把char*、指標、Unicode、wchar_t以及TCHAR含入檔搞懂，才會知道如何呼叫。而這些全都是漏洞。</p>
+<p>在教COM程式設計時，最好只要教學生如何使用Visual Studio的精靈和各個程式產生功能。不過萬一出了任何問題，他們根本不會知道怎麼回事，也不知道如何除錯或回復。我還是得教他們IUnknown和CLSID還有ProgIDS以及。哦，饒了我吧！</p>
+<p>在教ASP.NET程式設計時，最好只要教學生可以在元件上雙擊，然後就能撰寫使用者點擊該元件時在伺服器執行的程式。不過處理超連結(<strong>&lt;a&gt;</strong>)點擊事件的HTML程式，和某個按鈕被按時的處理程式是不一樣的，而ASP.NET實際上是把這之間的差異抽象化了。問題來了，ASP.NET的設計者必須把HTML無法由超連結傳送表格的事實隱藏起來。他們的做法是在超連結的onclick產理加上幾行JavaScript程式。不過這種抽象機制也有漏洞，如果使用者關閉JavaScript功能，ASP.NET的應用程式就不能正常的運作了，萬一程式師又不瞭解ASP.NET抽象掉什麼東西，根本不可能知道出了什麼問題。</p>
+<p>抽象滲漏法則表示，當某人發明一套神奇的新程式產生工具，可以大幅提升效率等等，就會聽到很多人說：「應該先學會如何手動進行，然後才用這個神奇的工具來節省時間。」 程式產生工具假裝抽象掉某些東西，和其他所有抽象機制一樣都有漏洞，而唯一能適當處理漏洞的方法，就是弄懂該抽象原理以及所隱藏的東西。所以抽象機制雖然替我們節省了工作的時間，不過學習的時間是省不掉的。</p>
+<p>而這一切都似非而是地表示，即使我們擁有愈來愈高階的程式設計工具，抽象化也做得愈來愈好，要成為一個純熟的程式師卻是愈來愈難了。</p>
+<p>我第一次去微軟實習時，寫了一個在麥金塔執行的字串程式庫。那是一個很典型的任務：寫一個自己的<strong>strcat</strong>函數傳回指向新字串結尾的指標。只要寫幾行C就夠了。我做的每件事都寫在K&amp;R裡面(一本講C程式語言的薄書)。</p>
+<p>今天為了要做CityDesk，我必須會Visual Basic、COM、ATL、C++、InnoSetup、Internet Explorer內部機制、正規表示式、DOM、HTML、CSS以及XML。一大堆比古老的K&amp;R更高階的工具，可是我還是得會K&amp;R講的東西，否則我就完了。</p>
+<p>我們十年前可能想像過，現在會有某些全新的程式設計典範讓程式設計更容易。事實上這些年間所建立的抽象機制，<em>的確</em>讓我們能處理更高複雜度的軟體開發(如GUI程式設計和網路程式設計)，這是十或十五年前無法處理的。這些偉大的工具(比如OO型式的程式語言)雖然能讓我們用飛快的速度完成許多工作，不過總會有一天我們得去追查因抽象滲漏而產生的問題，到時候就得查上兩星期了。另外雖然你得雇一個以寫VB程式為主的程式師，不過單純的VB程式師是不夠的，因為當VB的抽象機制滲漏時他們就完全卡住了。</p>
+<p>抽象滲漏法則正在拖垮我們。</p>
+<p><a title="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/" href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/">https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/</a></p>
+<p><a title="https://www.csie.ntu.edu.tw/~p92005/Joel/LeakyAbstractions.html" href="https://www.csie.ntu.edu.tw/~p92005/Joel/LeakyAbstractions.html">https://www.csie.ntu.edu.tw/~p92005/Joel/LeakyAbstractions.html</a></p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>Archives - Abby&#39;s Notes</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navigation">
+        <a href="/">Abby&#39;s Notes</a>
+      </nav>
+      <div class="blogs-list-block">
+        
+        <div class="annual-block">
+          <time class="annual-block-headline">2024</time>
+          <ol>
+            
+            <li>
+              <time datetime="1714389693882" class="annual-block-date">
+                2024-04-29 20:21
+              </time>
+              <a class="annual-block-title" href="/article/benchmarking-context-switching-between-p-cores-and-e-cores-on-intel-cpus">
+                Benchmarking Context Switching Between P-Cores and E-Cores on Intel CPUs
+              </a>
+            </li>
+            
+          </ol>
+        </div>
+        
+        <div class="annual-block">
+          <time class="annual-block-headline">2023</time>
+          <ol>
+            
+            <li>
+              <time datetime="1687721301818" class="annual-block-date">
+                2023-06-26 04:28
+              </time>
+              <a class="annual-block-title" href="/article/reflection">
+                說說關於反射的那些事
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1687721287850" class="annual-block-date">
+                2023-06-26 04:28
+              </time>
+              <a class="annual-block-title" href="/article/the-things-i-tested-on-a-broadcast-queue-multiqueue2">
+                The things I tested on a broadcast queue - multiqueue2
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1687721266019" class="annual-block-date">
+                2023-06-26 04:27
+              </time>
+              <a class="annual-block-title" href="/article/elden-ring-ending-explains">
+                艾爾登法環結局淺解
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1683269857795" class="annual-block-date">
+                2023-05-05 15:57
+              </time>
+              <a class="annual-block-title" href="/article/diffie-hellman">
+                重復使用 Diffie-Hellman 密鑰交換漏洞
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1674337902737" class="annual-block-date">
+                2023-01-22 06:51
+              </time>
+              <a class="annual-block-title" href="/article/new-year-pic-2023">
+                新年賀圖2023
+              </a>
+            </li>
+            
+          </ol>
+        </div>
+        
+        <div class="annual-block">
+          <time class="annual-block-headline">2022</time>
+          <ol>
+            
+            <li>
+              <time datetime="1667224524923" class="annual-block-date">
+                2022-10-31 22:55
+              </time>
+              <a class="annual-block-title" href="/article/joplin-blog">
+                Joplin Blog 設定方法
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1661287980108" class="annual-block-date">
+                2022-08-24 05:53
+              </time>
+              <a class="annual-block-title" href="/article/touhou-spell-bubble">
+                東方スペルバブル(東方咒術泡泡)
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1660738344882" class="annual-block-date">
+                2022-08-17 21:12
+              </time>
+              <a class="annual-block-title" href="/article/mysql-linear-hash">
+                MySQL 的Linear Hash 到底有多「不亂」
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1660735408574" class="annual-block-date">
+                2022-08-17 20:23
+              </time>
+              <a class="annual-block-title" href="/article/good-note-chart">
+                音樂遊戲中甚麼是好譜面
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1660734290018" class="annual-block-date">
+                2022-08-17 20:04
+              </time>
+              <a class="annual-block-title" href="/article/monster-hunter-dragon">
+                Monster Hunter 中的龍屬性到底是甚麼?
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1660534215274" class="annual-block-date">
+                2022-08-15 12:30
+              </time>
+              <a class="annual-block-title" href="/article/十三機兵防衛圈">
+                十三機兵防衛圈
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1660186437573" class="annual-block-date">
+                2022-08-11 11:53
+              </time>
+              <a class="annual-block-title" href="/article/作品評價集合">
+                作品評價集合
+              </a>
+            </li>
+            
+          </ol>
+        </div>
+        
+        <div class="annual-block">
+          <time class="annual-block-headline">2020</time>
+          <ol>
+            
+            <li>
+              <time datetime="1582570568000" class="annual-block-date">
+                2020-02-25 03:56
+              </time>
+              <a class="annual-block-title" href="/article/抽象滲漏法則">
+                抽象滲漏法則
+              </a>
+            </li>
+            
+            <li>
+              <time datetime="1582570556000" class="annual-block-date">
+                2020-02-25 03:55
+              </time>
+              <a class="annual-block-title" href="/article/最危險的遊戲">
+                最危險的遊戲
+              </a>
+            </li>
+            
+          </ol>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

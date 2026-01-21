@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      艾爾登法環結局淺解 - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          艾爾登法環結局淺解
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1687721266019">
+                2023-06-26 04:27
+              </time></span>
+            <span>Updated At: <time datetime="1687721269711">
+                2023-06-26 04:27
+              </time></span>
+          </div>
+          
+        </div>
+      </header>
+      <div class="article-content markdown-body"><p>說一下艾爾登法環</p>
+<p>希望能用我的文字幫助到玩完也還玩不懂的玩家們。</p>
+<p>我覺得描寫交界地，最好的方法是把它想像成一個單一的生物和思維系統設定的運行輸出。而正在運行的，叫做"無上意志"，載體則是艾爾登法環。無上意志可以讓它祝福的人得到強化。</p>
+<p>但它出Bug了，交界地混亂不堪。<br />
+它的位於外界的主人想要修復它，所以就找了一些個沒被"無上意志"祝福到的人來做這個角色</p>
+<p>因為這個角色都一定的管理者權限（例如在修復時加入大盧恩以外的東西），整個遊戲過程是一個"作為有能者"的工作證明。</p>
+<p>而遊戲過程的價值在於選擇:這個世界的問題的出現是因為交界地缺少了甚麼?<br />
+你可以選擇的答案有很多:<br />
+1：因為運行者有生物情感，規則的運行不完整，要移除復這點（黃金律法）<br />
+2：因為社會階層和信仰的存在，要移除現行的（群星）<br />
+3：因為生物對祝福有渴望，那請平等看待詛咒和祝福（食糞者）<br />
+4：因為現行的世界沒有死亡，那就為世界加入死亡（死王子）<br />
+5：其實沒有甚麼大毛病，簡單修復即可（只用大盧恩）<br />
+6：律法和生命是有機的，不滿的話只能破壞後重建，人為干涉不是答案（癲火之王）</p>
+<p>而每個信念在交界地中早就埋下種子，<br />
+他們是:思想家黃金面具、魔女菈妮、食糞者、菲雅、梅琳娜、三指和它的信徒、雙指</p>
+<p>除了群星和癲火，其他的基本上會保留現有的基本律法，算是各種大小補丁。但除了簡單修復，你都要為這個不怎麼主流的理念作出工作證明，這個交界地的生命和規則因為玩家的努力，規則上出現了或大或小的改變。<br />
+而出現的各種思想，在現實的社會也有很多哲學參照：<br />
+對應上面的結局:<br />
+1：發條宇宙/自然神論<br />
+2：無政府主義<br />
+3：解構主義<br />
+4：這是利用現實指導遊戲，或者利用地外指導交界地<br />
+5：普通人<br />
+6：超人說（by尼采）</p>
+<p>這是基本的哲學框架上的衝突，而到遊戲中的具像化則是：</p>
+<ol>
+<li>卡利亞的觀星者們和菈妮在尋星，替代無上法則</li>
+<li>食糞者尋找詛咒的根本</li>
+<li>食糞者、菲雅、黃金面具尋找的補丁盧恩</li>
+</ol>
+<p>題外話，盧恩在英文版中是符文，也就是寫在石頭上的古字母，我覺得有可運行代碼的感覺，也同時有作為貨幣的碎石的感覺。比起單純的音譯好很多</p>
+<p>說完了，那我開始說一下我在一周目的選擇：讓梅琳娜自我犠牲後，接受癲火。<br />
+接受癲火的任務中，會有一段：「你也不想這個女孩犠牲吧？」</p>
+<p>梅琳娜不會主動和我對話，我也不會主動找她對話，所以各地賜福中都對她沒有產生感情。她想要犠牲自己對燒樹時，我對於「我在單方面幫助她」的這個想法也還是沒變過。也就是一個幫助應該幫助「老朋友」（聽說中文版沒有把「old friend」譯出來）的想法。</p>
+<p>這雖然那一句是個道德綁架，但我沒有因此逆著走，雖然途中我沒有任何作為玩家的原動力，但。。。信徒宣傳不當不應影響我探索的選擇。一個封在皇城底的地獄，本來就已經cult 味十足了。我甚至覺得有在玩另一個遊戲的感覺。但先讓朋友在在生時完成她的虛假的願望有沒有比較好，我並沒有答案。</p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      The things I tested on a broadcast queue - multiqueue2 - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          The things I tested on a broadcast queue - multiqueue2
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1687721287850">
+                2023-06-26 04:28
+              </time></span>
+            <span>Updated At: <time datetime="1687721315631">
+                2023-06-26 04:28
+              </time></span>
+          </div>
+          
+        </div>
+      </header>
+      <div class="article-content markdown-body"><p>MultiQueue2 is a fast bounded mpmc queue that supports broadcast/broadcast style operations</p>
+<p>MultiQueue was developed by Sam Schetterer, but not updated for some time. I found it very useful as it implements futures. However, it is with a few outdated library API and the use of spin locks is taking 100% CPU in many cases.</p>
+<h1 id="stone-age">Stone Age</h1>
+<p>For any channels, if there is a potential for conflicts (more than one of the writers/readers are consuming the resources), there must be locks. So the 100% issue is very likely to be caused by a spinlock.</p>
+<p>At first, I did it in the <code>sleep way</code></p>
+<p>{% ghcode <a title="https://github.com/abbychau/multiqueue2/blob/a850ed674ccb7c2d47fddcbe72070cca0efa6cc2/src/wait.rs" href="https://github.com/abbychau/multiqueue2/blob/a850ed674ccb7c2d47fddcbe72070cca0efa6cc2/src/wait.rs">https://github.com/abbychau/multiqueue2/blob/a850ed674ccb7c2d47fddcbe72070cca0efa6cc2/src/wait.rs</a> 31 37 %}</p>
+<p>Nonetheless, I sacrified the throughput because I punished every check.</p>
+<p>And then, I tried a much <a title="https://github.com/abbychau/multiqueue2/commit/67ff0f3dc8e33467125a7fe6b5a57b25747678eb" href="https://github.com/abbychau/multiqueue2/commit/67ff0f3dc8e33467125a7fe6b5a57b25747678eb">smaller sleep</a>. This is just meaningless because it does not trigger CPU from P-State to S-State. And I immediately find that it may be fool to cocerce S-State in a spinlock design.</p>
+<p>And then I tried 1ms,10ms,1000ns, for both settings of <code>check after wait</code> or <code>check before wait</code>. <a title="https://github.com/abbychau/multiqueue2/commit/d3c9403762a34bbe11642419f66658844ec4d75d" href="https://github.com/abbychau/multiqueue2/commit/d3c9403762a34bbe11642419f66658844ec4d75d">link</a>. It does not make much different.</p>
+<p>I tried the <code>_mm_pause</code> from <code>SSE2</code> as well, but it does not make any different.</p>
+<p>{% ghcode <a title="https://github.com/abbychau/multiqueue2/blob/d82603a08a4d4e0875054e7dd9ac0a63dee928d5/src/wait.rs" href="https://github.com/abbychau/multiqueue2/blob/d82603a08a4d4e0875054e7dd9ac0a63dee928d5/src/wait.rs">https://github.com/abbychau/multiqueue2/blob/d82603a08a4d4e0875054e7dd9ac0a63dee928d5/src/wait.rs</a> 31 48 %}</p>
+<p>Although <code>_mm_pause</code> is designed for spinlock, but the point is CPU will not switch P-State and S-State just for a few nono-seconds. It is simply not the right way.</p>
+<h1 id="tool-age">Tool Age</h1>
+<p>Keep trying the trival ways will never proceed more (although it practically solved the system problem of 100% cpu usage in my program and my program is not required to be very performant too), so I stepped back and rethought about my first solution.</p>
+<p>The first solution was actually doing less checking and forcing the cpu to sleep, so that it does not waste too much energy to do useless checkings which are 99%(roughly) predictable.</p>
+<p>What I really want to punish are the collided conflicts, because they are very likely to be blocked again if the CPU checks in the next cycle. At this time, sleeping is better than checking.</p>
+<p>So I make the spinlock to be a swing-back one.</p>
+<p>{% ghcode <a title="https://github.com/abbychau/multiqueue2/blob/74dd8254c6c6f8f4148ef2be9d4f8ed9d89e124d/src/wait.rs" href="https://github.com/abbychau/multiqueue2/blob/74dd8254c6c6f8f4148ef2be9d4f8ed9d89e124d/src/wait.rs">https://github.com/abbychau/multiqueue2/blob/74dd8254c6c6f8f4148ef2be9d4f8ed9d89e124d/src/wait.rs</a> 31 42 %}</p>
+<p>This works exactly as expected. The cpu usage lowered and the through-put is able to pass all the tests.</p>
+<h1 id="futures">Futures</h1>
+<p>However, I then found that the CPU usage is high for future queues. That, there is a kind of hybrid lock used for future queues.</p>
+<p>Therefore, I removed all the Spin before going to <code>parking_lot::Mutex::new(VecDeque::new())</code>. <a title="https://github.com/abbychau/multiqueue2/commit/f311c7c02c392a656df85d662f8b3c1048536457" href="https://github.com/abbychau/multiqueue2/commit/f311c7c02c392a656df85d662f8b3c1048536457">link</a></p>
+<p>It increases the number of low level context switches very much but indeed lowed the CPU usage. By the nature of this heavy switch comparing to the light weight spinlock, the through-put of future queues becomes just 1/10 of the normal queue.</p>
+<p>And this experiment also taught me the performance ratio between <code>parking_lot</code> mutexes and native spins.</p>
+<h1 id="no-silver-bullet">No Silver Bullet</h1>
+<p>I really would like to come up with an equation for people to set the <code>try_spins</code> precisely, but it is very complicated because it includes all the envirnment information like CPU frequency, number of consumers, rate of feeding, etc.</p>
+<p>So I can just left it to the user.</p>
+<p>{% ghcode <a title="https://github.com/abbychau/multiqueue2/blob/master/src/multiqueue.rs" href="https://github.com/abbychau/multiqueue2/blob/master/src/multiqueue.rs">https://github.com/abbychau/multiqueue2/blob/master/src/multiqueue.rs</a> 1099 1125 %}</p>
+<p>I would like to investigate and develop a clear equation for concurrency hybrid lock, but it seems to be a bit long and I may have it later in a Paper form.</p>
+<p>Feel free to leave issues or comments.</p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

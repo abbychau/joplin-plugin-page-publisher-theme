@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      東方スペルバブル(東方咒術泡泡) - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          東方スペルバブル(東方咒術泡泡)
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1661287980108">
+                2022-08-24 05:53
+              </time></span>
+            <span>Updated At: <time datetime="1661288611769">
+                2022-08-24 06:03
+              </time></span>
+          </div>
+          
+            <div>
+              Keywords: 
+                <span class="keyword">
+                  拼圖遊戲
+                </span>
+                
+                <span class="keyword">
+                  遊戲
+                </span>
+                
+                <span class="keyword">
+                  音樂遊戲
+                </span>
+                
+                <span class="keyword">
+                  東方project
+                </span>
+                
+            </div>
+            
+        </div>
+      </header>
+      <div class="article-content markdown-body"><p>東方スペルバブル太好玩了!</p>
+<p>我一直都想過要有一隻puz + mus 的遊戲, 一直想法是寫一隻"按照節奏下落俄羅斯方塊"。</p>
+<p>但試過一下後發覺有點難。</p>
+<p>沒想到我守株待兔待到了東方咒術泡泡！裡面用的還是一堆經典同人東方音樂！</p>
+<p><img src="/_resources/1d48ba0e66f442c894458b284d26c3a1.png" /></p>
+<p>(我就一直好奇神主就不叫東家開發一隻嗎?</p>
+<p>東方咒術泡泡（下稱東咒／東泡）有很多很經典的東方同人音樂。</p>
+<p>玩法上有幾個大點：</p>
+<p>一：我用這集和我比較熟悉的Puzzle Bubble 4 的系統比較, 東咒容許斜角穿透，而且判定很大，裡面有極多的特殊方塊，如何迅速地利用正面方塊和抵消負面方塊是這一集的重點之一。同時它移除了4代的連鎖系統，但排珠變得更為整齊，有更多的相連。</p>
+<p>二：比起是4代，東泡更注重大塊消除取分。因為有一個取分的方法是把四枚以上消除的珠按8分音符（半拍）的速度消失，而踩中譜面的符點的會在面板中出現特殊的標記。準確地按拍子打中標記會得分。而掉下消除則還是能用以攻擊。</p>
+<p>三是對戰方面：對戰中大約可以分為兩個目標，一是盡量取得可以從「二」上取得的得分，二是把對方推死，和一般的PUZ不一樣，對方被推死後不會完結，也不會得到賽點，而是對方會把版面上的珠加到你的總分中，而對方會進入一個珠排得不錯的無敵狀態，直到版面全清為止。通常一方被殺後總分會落後很多，幾乎沒法透過打NOTE追回來。</p>
+<p>對戰會在歌曲播完後完結，比較雙方得分來決勝負。（這點就挺音遊的）</p>
+<p>服務於第二三點的有這一集獨有的「主動下降系統」，玩家可以透過按一個按鍵自願下降一行，以構成更大的大塊同色珠來漲分和攻擊，缺點是容易被對手突擊推死。</p>
+<p>四是符卡和覺醒：符卡是這集獨有的防守方式／攻擊方式／漲分方式。每個人都有前所未見過的三招符卡，在一定秒數（按技能不同冷卻約50至100秒）後可以發動。所以在極端情況下可以拖下落回合幾秒等冷卻。覺醒是在主動消夠一定方塊後進入的類PUZZLE 模式，可以大量漲分和攻擊，然後還會重置版面讓你擺脫危機。</p>
+<p>五是譜面：這和DJMAX 很像，不同的場合按FEVER 的分數可以差無數倍。因為「二」的原因，在清板時譜面密不密集也會大量影響能取得的分數。所以在消關鍵珠時可以等一下音樂。</p>
+<p>六就是節奏了，節奏型通常很簡單，尤其是對東方廚來說，簡直就是回家的路一樣。但這個節奏在對攻時還是要在心裡保持，這就是個很獨特的體驗了。</p>
+<p>總括來說，就是一隻無論對手強不強，你都可以用盡全力一瞬就進入眼珠和腦袋不停打轉的狀態，這通常是痛苦的，但伴隨著這些熟識的歌曲，卻是又忙碌又愉快。對戰系統整體來說上限很高（尤其那「主動下降系統」給予比以前更大的老手操作的餘量），不是新手練幾天就可以和人或者和挑戰關卡對戰的那種遊戲。</p>
+<p>東咒對泡泡龍對戰、東方PROJECT 歌曲的熟悉度、節奏準度、冒險與保守的策略轉換、一心（眼）多用（讀譜、puzzle解板、組板進攻、計算符卡和覺醒、觀察對手的攻防階段等）都有一定的要求。算是只能用心流玩，一玩就只能進心流的奇特體驗，單就這個體驗就值得一玩了。</p>
+<p>這網站有遊戲中收錄的所有歌曲: <a title="https://www.taito.co.jp/touhouSB/music" href="https://www.taito.co.jp/touhouSB/music">https://www.taito.co.jp/touhouSB/music</a><br />
+（基本上百分之九十都是名曲了）</p>
+<p>這遊戲是TAITO 最棒的資源整合。就遊戲開發流程來說，這應沒花甚麼成本，卻是這麼的新奇。為新嘗試鼓掌。</p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

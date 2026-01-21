@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      說說關於反射的那些事 - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          說說關於反射的那些事
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1687721301818">
+                2023-06-26 04:28
+              </time></span>
+            <span>Updated At: <time datetime="1687721305766">
+                2023-06-26 04:28
+              </time></span>
+          </div>
+          
+        </div>
+      </header>
+      <div class="article-content markdown-body"><p>上班摸個魚, 說說關於反射的那些事。</p>
+<p>對於Java 和.NET 的廣大民工（不包括我）來說，學習框架似乎就是在市場提供生產力的本命。<br />
+而現代框架中，都不能避免出現Attribute/Annotation 式的標注。</p>
+<p>這種標注都會在「框架」層面以反射形式分析，以在實際以在確定的運行次序上觸法各個時間點上和條件上的勾子。</p>
+<p>這種在VM/解釋器層面上解構語法然後組成IR 的方法，有沒有很像。。。Eval 和Goto?<br />
+我們大多不喜歡Eval ，因為它會出現性能問題，也令閱讀程式碼時加入一層腦內的堆積(heap)。</p>
+<p>人類在閱讀時加入heap 是一項「有挑戰性」的工作。<br />
+A=2222；B=1111；C=A+B；Print("I have $"+C);<br />
+像這種簡單的狀態對大部分人來說是輕鬆的。因為在閱讀時，讀者都有一種在猜測寫作目的的自動回收器。<br />
+以上面這個例子來說，讀到Print 時就會把「A=2222；B=1111；C=A+B；」回收了。留下「I have $3333」這樣的句子。</p>
+<p>雖然作用不盡相似，但Eval和Goto 都是令回收（很抱歉要用和GC 同一個動詞）不能執行的工具。<br />
+Attribute 也是，和eval 相似，我們要記下所有作者寫下的勾子定義。</p>
+<p>Eval 是這種:<br />
+我收到一封信，可以被小貓撕碎了。<br />
+第1片寫著 A=<br />
+第2片寫著 1111<br />
+第3片寫著 C=A+B; Print("I have $"+C);<br />
+第4片寫著 2222; B=<br />
+按1,4,2,3 的次序排好再閱讀:</p>
+<p>Attribute 是:<br />
+當我回到家時, 在袋裡找找有沒有名為home 的信封，<br />
+當我睡覺前，在袋裡找找有沒有名為sleep 的信封.<br />
+....<br />
+有的話就按指示做</p>
+<p>「在袋裡找找」就是一個令理解時間複雜度提高的行為了。<br />
+而加速的方法就只有去學習自己或他人的行為方式：<br />
+例如：「信封只可能在袋的暗格A 和暗格C 之中。因為B格是放Breakfast 的。」<br />
+可是，要獲得這個信息就必需經過所謂的「學習」的過程了。而這種學習是亳無遷移價值的。<br />
+至少，學習者的底力提升甚微。</p>
+<p>attribute 從自出生開始就是meta-data。meta-data 本是是一個不參與邏輯的信息，可是偏偏有人利用reflection 拿出來利用了。<br />
+reflection這個字也是很美妙：他是一個鏡像（順面在此建議別把CD / HDD 的copy 稱為鏡像, 直接叫成deep-copy 更好)：只見其表，無限清晰，甚至能讓你比起日常更仔細地看清表像的細節，而無視內觀（相對於外觀）。</p>
+<p>這種分攤緊密邏輯理解負荷，到閱讀記憶負荷的轉變，明顯地是佔用大量的中短期記憶。<br />
+而把本命的大部分建立在中短期記憶上，你們沒有覺得很「陰謀」嗎？<br />
+（不用開解我，我是從其他可以觀察到的從業員身上出發，我過得挺好的）</p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>

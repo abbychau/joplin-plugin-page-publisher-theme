@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" />
+<style>
+.main {
+  width: 85%;
+  margin: 50px auto 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+.navigation a {
+  color: #ff001f;
+  text-decoration: underline solid;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+#homepage,
+#homepage body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homepage-main {
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.homepage-title-area {
+  transition: opacity 1s;
+  margin-bottom: 60px;
+}
+
+.homepage-title,
+.homepage-subtitle {
+  text-align: center;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-subtitle {
+  font-size: 12px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.homepage-navigation ul {
+  padding: 0;
+  text-align: center;
+}
+
+.homepage-navigation li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+.homepage-navigation li:first-child {
+  margin-left: 0;
+}
+
+.homepage-navigation a {
+  color: #dd4242;
+  text-decoration: none;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.homepage-navigation a:hover {
+  text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.about li {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-top: 15px;
+}
+.about li a {
+  color: #000;
+  text-decoration: underline solid;
+}
+
+.article-title {
+  font-weight: normal;
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.article-info {
+  color: #777777;
+  margin-bottom: 50px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+.article-info span {
+  margin: 0 30px 0px 0;
+}
+
+.article-info .keyword {
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff")
+    format('woff');
+}
+
+.blogs-list-block {
+  line-height: 1.5em;
+}
+.blogs-list-block ol {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 600px) {
+  .blogs-list-block ol {
+    padding-left: 1em;
+  }
+}
+.blogs-list-block li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.annual-block {
+  margin-bottom: 50px;
+}
+
+.annual-block-headline {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+
+.annual-block-title {
+  font-family: apple-system, 'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+.annual-block-title.is-dir {
+  text-decoration: dotted underline;
+}
+
+.annual-block-date {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  margin-right: 30px;
+  color: #999999;
+}
+
+.rss-link {
+  display: block;
+  width: 3em;
+  padding-left: 100%;
+  margin: 50px 0 100px -3em;
+  color: #000;
+}
+
+.error {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.error p {
+  font-size: 20px;
+}
+.error a {
+  font-family: 'Lucida Console', 'Liberation Mono', Menlo, Monaco, Roboto, apple-system,
+    'Helvetica Neue', Arial, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+  text-decoration: underline dotted;
+  color: #777777;
+}
+
+</style>
+
+    <title>
+      重復使用 Diffie-Hellman 密鑰交換漏洞 - Abby&#39;s Notes
+    </title>
+</head>
+
+<body>
+  <div class="main">
+    <nav class="navigation">
+      <a href="/">
+        Abby&#39;s Notes
+      </a>
+    </nav>
+    <article>
+      <header>
+        <h1 class="article-title">
+          重復使用 Diffie-Hellman 密鑰交換漏洞
+        </h1>
+        <div class="article-info">
+          <div>
+            <span>Created At: <time datetime="1683269857795">
+                2023-05-05 15:57
+              </time></span>
+            <span>Updated At: <time datetime="1683271757867">
+                2023-05-05 16:29
+              </time></span>
+          </div>
+          
+            <div>
+              Keywords: 
+                <span class="keyword">
+                  computing
+                </span>
+                
+            </div>
+            
+        </div>
+      </header>
+      <div class="article-content markdown-body"><p><img src="https://i3.ytimg.com/vi/gVtjsd00fWo/maxresdefault.jpg" /><br />
+link: <a title="https://www.youtube.com/watch?v=gVtjsd00fWo" href="https://www.youtube.com/watch?v=gVtjsd00fWo">https://www.youtube.com/watch?v=gVtjsd00fWo</a></p>
+<p>好了，我其實不關心有沒有網站開始強制禁止 TLS 1.3 downgrade。下面是看完之後給還是不懂的人寫的一點小筆記。</p>
+<p>我把這個漏洞的原理命名為「重復使用Diffie-Hellman密鑰交換」好了</p>
+<p>概括來說：<br />
+利用這個漏洞有三步</p>
+<ol>
+<li>攻擊者先得知一些使用相同固定參數的Diffie-Hellman密鑰交換協商過程，記錄其中的通信數據和參數。這些參數通常由Web服務器預先設定，並在與客戶端進行安全協商時使用。參數下面再寫。</li>
+<li>攻擊者使用這些記錄下來的通信數據和參數，利用離線破解的方法計算出協商的對稱密鑰。</li>
+<li>利用對Negotiated Symetric Key (下稱NGK或代數s) 解密並記錄</li>
+</ol>
+<p>計算原理如下：</p>
+<ol>
+<li>
+<p>假設攻擊者攔截了使用固定參數的Diffie-Hellman密鑰交換協商過程，其中Web Server使用了預設的參數：</p>
+<pre><code> 質數 or p = 23
+ 底 or g = 5
+ Web服務器選擇的私鑰為a = 6
+ 而現實上，p 是Oakley Group 2。(1024長度，768長度則是Group 1)
+</code></pre>
+</li>
+<li>
+<p>那麼攻擊者可以先計算 A = 5^6 mod 23 = 8</p>
+</li>
+<li>
+<p>client 和server 執行基於Diffie-Hellman 的 public key exchange</p>
+</li>
+<li>
+<p>假設client private key, b = 15, 好好記住這個代數b, 這是攻擊者的目標 , 那麼public key, <code>B = 5^15 mod 23 = 19</code></p>
+</li>
+<li>
+<p>Server 和 Client 各自使用對方的public key 和自己的private key 計算出NGK :<br />
+在這個例子中：</p>
+<p>web: s = B^a mod p = 19^6 mod 23 = 2<br />
+client: A^b mod p = 8^15 mod 23 = 2</p>
+</li>
+<li>
+<p>這步是關鍵的一步<br />
+攻擊者希望得到b，也就是client 的private key<br />
+也就是<code>b = logg(s) mod p = log5(2) mod 23 = 15</code></p>
+</li>
+</ol>
+<p>～～～～～～～～<br />
+第六步是這樣的：</p>
+<p>攻擊者可以先離線破解的部分在於：<br />
+<code>g^b = s (mod p)</code> 是一個離散對數問題<br />
+g和p 是固定的, s 是公開的</p>
+<p>那麼要在短時間內, 基於某個s 找出g^b，離散對數問題可以用BSGS 或者Pollard-rho 來解。time-complexity 是 sqrt(p)。而且parallelize well。</p>
+<p>那麼破解的重點在於把<code>g^b = s mod p</code> 裡面計算次序按p 為優先, 把所有可以給(p) -&gt; (g , b) 制成一個離散的對數表。</p>
+<p>那麼就可以在破解時利用它來減低 time-complexity。<br />
+計算所需的cpu time 在片的最後有說要多麼的苛刻就不重複了。</p>
+<p>我在Paper 中的 takeaway 是, 在這麼time-complexity reduction 下，增加key 長度的對破解時間需求的增加倍率不大。</p>
+<p>所以它終究來說不能成為長久可以依賴的算法。</p>
+</div>
+    </article>
+  </div>
+</body>
+
+</html>
